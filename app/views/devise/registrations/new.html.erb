@@ -1,7 +1,13 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+
+<div class="field">
+    <%= f.label :name %>
+    <%= f.text_area :name, autofocus: true, autocomplete: "name" %>
+  </div>
+ <div class="field">
 
   <div class="field">
     <%= f.label :email %><br />
@@ -19,6 +25,21 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+<div class="field">
+    <%= f.label :birth_country %><br />
+    <%= f.text_area :birth_country, autofocus: true, autocomplete: "birth_country" %>
+  </div>
+ <div class="field">
+  地域
+<span class="indispensable">必須</span>
+
+<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+</div>
+<div class="field">
+    <%= f.label :identity  %><br />
+    <%= f.text_area :identity, autofocus: true, autocomplete: "identity" %>
   </div>
 
   <div class="actions">
