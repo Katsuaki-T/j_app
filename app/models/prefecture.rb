@@ -21,6 +21,6 @@ class Prefecture < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :topics
+  has_many :users
   
 end
