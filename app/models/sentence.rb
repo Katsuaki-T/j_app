@@ -1,4 +1,4 @@
-class Prefecture < ActiveHash::Base
+class Sentence < ActiveHash::Base
   self.data = [
     
     { id: 1, name: '--' }, 
