@@ -5,7 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
 
+  has_many :topics
+  
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
-  
+
 end
