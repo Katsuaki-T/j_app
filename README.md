@@ -35,8 +35,9 @@
 
 | Column               | Type       | Options                        |
 | -------------------- | ---------- | ------------------------------ |
-| comment              | text       | null: false                    |
+| text                 | text       | null: false                    |
 | topic                | references | foreign_key:true               |
+| user                 | references | foreign_key:true               |
 
 ### Association
 

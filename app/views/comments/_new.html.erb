@@ -1,0 +1,20 @@
+
+
+<div class="comment-box">
+<br>
+  <%= form_with model: [@topic,@comment] do |f| %>
+     <%= f.text_area :text %>
+     
+     
+     <div id='comments'>
+  <% @topic.comments.each do |comment| %>
+    <p><%= comment.text %></p>
+  <% end %>
+  </div>
+     
+      <button type="submit" class="comment-btn">
+        
+        <span>コメントする<span>
+      </button>
+    <% end %>
+  </div>

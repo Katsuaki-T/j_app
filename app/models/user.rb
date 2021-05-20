@@ -12,6 +12,7 @@ class User < ApplicationRecord
 
   
   has_many :topics
+  has_many :comments
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
