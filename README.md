@@ -15,6 +15,7 @@
 ### Association
 
 - has_many :topics
+- has_one :sns_credential
 
 
 ## topics table
@@ -42,3 +43,16 @@
 ### Association
 
 - belongs_to :topic
+
+
+# sns_credentials テーブル
+
+| Column               | Type       | Options                        |
+| -------------------- | ---------- | ------------------------------ |
+| provider             | string     |                                |
+| uid                  | string     |                                |
+| user                 | references | foreign_key:true               |
+
+### Association
+
+- belongs_to :user
