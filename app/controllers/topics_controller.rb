@@ -26,6 +26,15 @@ class TopicsController < ApplicationController
     @topic = Topic.find(params[:id])
   end
 
+  def update
+    @topic = Topic.find(params[:id])
+    if @topic.update(topic_params)
+      redirect_to topic_path(@topic.id)
+    else
+      render :edit
+    end
+  end
+
   private
   def topic_params
     params.require(:topic).permit(:sentence_id, :description).merge(user_id: current_user.id)
