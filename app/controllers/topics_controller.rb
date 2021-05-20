@@ -1,6 +1,8 @@
 class TopicsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
+    @topics = Topic.includes(:user).order('created_at DESC')
   end
   
   def new

@@ -1,1 +1,43 @@
-<h1> 私は日本語を勉強します</h1>
+<%= render "shared/header" %>
+
+<h1> Test</h1>
+
+<div class='main'>
+
+<% if @topics[0] != nil %>
+    <% @topics.each do |topic| %>
+      <div class='list'>
+<%= link_to topic_path(topic.id) do %>
+      </div class='table'>
+ <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">name</th>
+          <td class="detail-value"><%= topic.user.name %> </td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">birth_country</th>
+          <td class="detail-value"><%= topic.user.birth_country %> </td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">sentence</th>
+          <td class="detail-value"><%= topic.sentence.name %></td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">prefecture</th>
+          <td class="detail-value"><%= topic.user.prefecture.name %> </td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">identity</th>
+          <td class="detail-value"><%= topic.user.identity %> </td>
+        </tr>
+      </tbody>
+ </table>
+</div>
+    <% end %>
+  <% end %>
+<% end %>
