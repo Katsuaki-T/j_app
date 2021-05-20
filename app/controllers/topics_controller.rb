@@ -22,6 +22,10 @@ class TopicsController < ApplicationController
     @topic = Topic.find(params[:id])
   end
 
+  def edit
+    @topic = Topic.find(params[:id])
+  end
+
   private
   def topic_params
     params.require(:topic).permit(:sentence_id, :description).merge(user_id: current_user.id)
