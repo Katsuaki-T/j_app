@@ -18,6 +18,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "そうしん" %>
+    <%= f.submit "へんこう" %>
+    <%=link_to 'もどる', topic_path(@topic.id), class:"back-btn" %>
   </div>
 <% end %>
