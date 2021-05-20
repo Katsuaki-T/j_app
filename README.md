@@ -37,6 +37,7 @@
 | -------------------- | ---------- | ------------------------------ |
 | text                 | text       | null: false                    |
 | topic                | references | foreign_key:true               |
+| user                 | references | foreign_key:true               |
 
 ### Association
 
