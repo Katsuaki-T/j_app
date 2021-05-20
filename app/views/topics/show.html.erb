@@ -35,12 +35,14 @@
   </tr>
 </div>
 <br>
-<%if current_user.id == @topic.user_id %>
+<% if user_signed_in? %>
+  <%if current_user.id == @topic.user_id %>
   
-  <%= link_to "topicの編集", edit_topic_path(@topic.id), method: :get, class: "topic-red-btn" %>
-  <p class="or-text">or</p>
-  <%= link_to "topicの削除", topic_path, method: :delete, class:"topic-destroy" %>
+    <%= link_to "topicの編集", edit_topic_path(@topic.id), method: :get, class: "topic-red-btn" %>
+    <p class="or-text">or</p>
+    <%= link_to "topicの削除", topic_path, method: :delete, class:"topic-destroy" %>
 
+  <% end %>
 <% end %>
 
 <%= render "comments/new" %>
