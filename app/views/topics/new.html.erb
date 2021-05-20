@@ -1,0 +1,23 @@
+</header>
+  <div class="topics-sell-main">
+    <h2 class="topics-sell-title">sentenseを入力</h2>
+    <%= form_with model:@topic, local: true do |f| %>
+    </div>
+ </header>
+    
+     <%= render 'shared/error_messages', model: f.object %>
+<div class="field">
+<span class="indispensable">必須</span>
+
+<%= f.collection_select(:sentence_id, Sentence.all, :id, :name, {}, {class:"select-box", id:"topic-sentence"}) %>
+</div>
+
+<div class="field">
+    <%= f.label :description  %><br />
+    <%= f.text_area :description, autofocus: true, autocomplete: "description" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "そうしん" %>
+  </div>
+<% end %>
