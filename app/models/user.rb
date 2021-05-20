@@ -31,5 +31,6 @@ class User < ApplicationRecord
       sns.save
    end
     user
+  end
 
 end
