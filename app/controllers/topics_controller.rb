@@ -1,5 +1,8 @@
 class TopicsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_topic, only: [:edit, :show, :update, :destroy]
+  before_action :move_to_index, except: [:index, :show, :new, :create]
+
 
   def index
     @topics = Topic.includes(:user).order('created_at DESC')
@@ -19,15 +22,15 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @topic = Topic.find(params[:id])
+    
   end
 
   def edit
-    @topic = Topic.find(params[:id])
+    
   end
 
   def update
-    @topic = Topic.find(params[:id])
+    
     if @topic.update(topic_params)
       redirect_to topic_path(@topic.id)
     else
@@ -36,7 +39,7 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-    @topic = Topic.find(params[:id])
+
     @topic.destroy
     
   end
@@ -44,6 +47,14 @@ class TopicsController < ApplicationController
   private
   def topic_params
     params.require(:topic).permit(:sentence_id, :description).merge(user_id: current_user.id)
+  end
+
+  def set_topic
+    @topic = Topic.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to action: :index unless current_user.id == @topic.user_id
   end
 
 end
