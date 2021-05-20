@@ -1,6 +1,11 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+
+  ActionCable.server.config.disable_request_forgery_protection = true
+  config.action_cable.url = "wss://j_app.herokuapp.com/cable" 
+  config.action_cable.allowed_request_origins = ['https://j_app.herokuapp.com', 'http://j_app.herokuapp.com']
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
