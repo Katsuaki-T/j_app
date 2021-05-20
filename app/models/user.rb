@@ -30,7 +30,7 @@ class User < ApplicationRecord
       sns.user = user
       sns.save
    end
-    user
+   { user: user, sns: sns }
   end
 
 end
