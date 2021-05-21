@@ -4,6 +4,17 @@
 
 <%= link_to 'kind_japaneseへ',kind_japanese_index_path %>
 
+<h1>
+  sentence検索
+</h1>
+<%= search_form_for @p, url: search_topics_path do |f| %>
+  <%= f.label :name_eq, 'sentence名' %>
+  <%= f.collection_select :sentence_id_eq, Sentence.all , :id, :name %>
+  <br>
+  <%= f.submit '検索' %>
+  
+
+
 
 <div class='main'>
 
@@ -15,6 +26,12 @@
  <table class="detail-table">
  <br>
       <tbody>
+
+       <tr>
+          <th class="detail-item">sentence</th>
+          <td class="detail-value"><%= topic.sentence.name %></td>
+        </tr>
+
         <tr>
           <th class="detail-item">name</th>
           <td class="detail-value"><%= topic.user.name %> </td>
@@ -23,11 +40,6 @@
         <tr>
           <th class="detail-item">birth_country</th>
           <td class="detail-value"><%= topic.user.birth_country %> </td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">sentence</th>
-          <td class="detail-value"><%= topic.sentence.name %></td>
         </tr>
 
         <tr>
@@ -44,6 +56,7 @@
 </div>
     <% end %>
   <% end %>
+<% end %>
 <% end %>
 <br>
 <%= link_to '投稿する',new_topic_path %>
