@@ -5,12 +5,17 @@
 <% if @results.length !=0 %>
   <% @results.each do |result| %>
     <td>
-    <br>
-    <li>
-      <%= result.sentence.name %>
-      
-      
-    </li>
+    
+ 
+      <%= result.user.name %><br>
+      <%= result.user.birth_country %><br>
+      <%= result.user.prefecture.name %><br>
+      <%= result.user.identity %><br>
+      <br>
+      <%= result.description %><br>
+      <br>
+    
+    </table>
   <% end %>
 <% else %>
   該当する商品はありません
