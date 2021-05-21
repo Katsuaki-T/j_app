@@ -6,6 +6,7 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.includes(:user).order('created_at DESC')
+    
   end
   
   def new
@@ -44,7 +45,7 @@ class TopicsController < ApplicationController
   end
 
   def search
-    @results = @p.result.includes(:sentence_id)  # 検索条件にマッチした商品の情報を取得
+    @results = @p.result  # 検索条件にマッチした商品の情報を取得
   end
 
   private
@@ -63,5 +64,6 @@ class TopicsController < ApplicationController
   def search_topic
     @p = Topic.ransack(params[:q])  # 検索オブジェクトを生成
   end
+
 
 end

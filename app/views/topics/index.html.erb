@@ -4,6 +4,16 @@
 
 <%= link_to 'kind_japaneseへ',kind_japanese_index_path %>
 
+<h1>
+  sentence検索
+</h1>
+<%= search_form_for @p, url: search_topics_path do |f| %>
+  <%= f.label :name_eq, 'sentence名' %>
+  <%= f.collection_select :sentence_id_eq, Sentence.all , :id, :name,  include_blank: '指定なし' %>
+  <br>
+  <%= f.submit '検索' %>
+<% end %>
+
 
 <div class='main'>
 
