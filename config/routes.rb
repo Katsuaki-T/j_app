@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :comments, only: [:create]
  end
 
+resources :kind_japanese, only: [:index]
+
 end

@@ -2,6 +2,9 @@
 
 <h1> Test</h1>
 
+<%= link_to 'kind_japaneseへ',kind_japanese_index_path %>
+
+
 <div class='main'>
 
 <% if @topics[0] != nil %>
@@ -10,6 +13,7 @@
 <%= link_to topic_path(topic.id) do %>
       </div class='table'>
  <table class="detail-table">
+ <br>
       <tbody>
         <tr>
           <th class="detail-item">name</th>
