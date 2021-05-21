@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_topic, only: [:edit, :show, :update, :destroy]
-  before_action :move_to_index, except: [:index, :show, :new, :create]
+  before_action :move_to_index, except: [:index, :show, :new, :create,:search]
   before_action :search_topic, only: [:index, :search]
 
   def index
