@@ -26,7 +26,7 @@ ja:
         unlock_token: ロック解除用トークン
         updated_at: 更新日
     models:
-      user: ユーザー
+      user: あなたの情報（じょうほう）
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
@@ -139,5 +139,5 @@ ja:
       not_found: は見つかりませんでした。
       not_locked: はロックされていません。
       not_saved:
-        one: エラーが発生したため %{resource} は保存されませんでした。
-        other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした。"
+        one: エラーが発生(はっせい）したため %{resource} は保存（ほぞん）されませんでした。
+        other: "%{count} 個（こ）の空欄（くうらん）がありますから %{resource} をもう一度（いちど）入力（にゅうりょく）してください。"
