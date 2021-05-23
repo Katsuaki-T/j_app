@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
 
     context '内容に問題がない場合' do
 
-      it '全てのトピックがあれ保存できる場合' do
+      it '全てのトピックがあれば保存できる場合' do
         expect(@user).to be_valid
       end
 

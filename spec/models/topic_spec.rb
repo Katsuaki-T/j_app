@@ -7,7 +7,7 @@ RSpec.describe Topic, type: :model do
     end
 
     context '内容に問題がない場合' do
-      it '全てのトピックがあれ保存できる場合' do
+      it '全てのトピックがあれば保存できる場合' do
         expect(@topic).to be_valid
       end
     end
