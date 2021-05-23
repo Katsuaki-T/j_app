@@ -17,6 +17,11 @@ RSpec.describe User, type: :model do
         @user.password_confirmation = "000000"
         expect(@user). to be_valid
         end
+
+        it 'identityがなくても保存できる' do
+          @user.identity = ''
+          expect(@user).to be_valid
+        end
     end
 
     context '内容に問題がある場合' do
