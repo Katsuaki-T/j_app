@@ -1,5 +1,8 @@
 <h2>Log in</h2>
 
+<%= link_to 'root',root_path %>
+
+<br>
 <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post%><br>
 
 <%= flash[:notice] = '今は「やさしいHP」の外にいます'  %><br>
