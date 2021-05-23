@@ -1,8 +1,10 @@
 <h2>Sign up</h2>
 
+<%= link_to 'root',root_path %>
+
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
+<br>
 <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
@@ -10,7 +12,7 @@
  <div class="field">
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
@@ -33,7 +35,7 @@
  <% end %>
 
 <div class="field">
-    <%= f.label :birth_country %><br />
+    <%= f.label :birth_country %>
     <%= f.text_area :birth_country, autofocus: true, autocomplete: "birth_country" %>
   </div>
  <div class="field">
