@@ -107,6 +107,10 @@ input, select {
   *font-size:100%;
 }
 
+li {
+  list-style: none;
+}
+
 * {
   box-sizing: border-box;
 }
