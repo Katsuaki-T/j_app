@@ -2,8 +2,13 @@
   width: 1200px;
   padding: 0 40px;
   margin: 0 auto;
-  background-color:green;
+  background-color: #fbeb87;
 }
 header > .container{
-  height:80px;
+  height:95px;
+  display: flex;
+  align-items: center;
+}
+.header_logo {
+  vertical-align: bottom;
 }
