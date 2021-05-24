@@ -1,0 +1,21 @@
+.container_f {
+  width: 1025px;
+  padding: 0 40px;
+  margin: 0 auto;
+  background-color: #fbeb87;
+}
+.footerer > .container_f{
+  height:95px;
+  
+}
+.footer_logo {
+  vertical-align: bottom;
+  display:flex;
+  justify-content: center;
+}
+.copy_right {
+  color: #ffffff;
+  font-size: 12px;
+  align-items: center;
+  margin-left: 330px;
+}
