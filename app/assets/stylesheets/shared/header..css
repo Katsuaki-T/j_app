@@ -1,0 +1,27 @@
+.container {
+  width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+  background-color: #fbeb87;
+}
+header > .container{
+  height:95px;
+  display: flex;
+  align-items: center;
+}
+.header_logo {
+  vertical-align: bottom;
+}
+.header_nav {
+  margin-left: auto;
+}
+ .header_list {
+  font-size: 16px;
+  font-weight: bold;
+}
+#hl_left {
+  margin-left: 30px;
+}
+#hl_right {
+  margin-left: 87px;
+}
