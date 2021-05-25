@@ -4,60 +4,55 @@
 
 <%= link_to 'kind_japaneseへ',kind_japanese_index_path %>
 
-
+<div class="topic_search_main">
 <%= search_form_for @p, url: search_topics_path do |f| %>
-  <%= f.label :name_eq, '文章を 私は 選びます' %>
+  <%= f.label :name_eq, '私(わたし)は 文章(ぶんしょう)を 選(えら)びます' %>
   <%= f.collection_select :sentence_id_eq, Sentence.all , :id, :name %>
   <br>
   <%= button_tag type: :submit ,class: "search_btn" do %>
   <%= image_tag('banana.png',size:'30x20')  %>
 <% end %>
-
+</div>
 
 
 
 
 <div class='main'>
+ <div class='inner'>
+    <% if @topics[0] != nil %>
+     <ul class="topic_lists">
+        <% @topics.each do |topic| %>
 
-<% if @topics[0] != nil %>
-    <% @topics.each do |topic| %>
-      <div class='list'>
-<%= link_to topic_path(topic.id) do %>
-      </div class='table'>
- <table class="detail-table">
- <br>
-      <tbody>
+        
 
-       <tr>
-          <th class="detail-item">sentence</th>
-          <td class="detail-value"><%= topic.sentence.name %></td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">name</th>
-          <td class="detail-value"><%= topic.user.name %> </td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">birth_country</th>
-          <td class="detail-value"><%= topic.user.birth_country %> </td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">prefecture</th>
-          <td class="detail-value"><%= topic.user.prefecture.name %> </td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">identity</th>
-          <td class="detail-value"><%= topic.user.identity %> </td>
-        </tr>
-      </tbody>
- </table>
-</div>
+    <%= link_to topic_path(topic.id) do %>
+     
+    <div class="card_wrapper">
+    <br>
+      <li class="card">
+       <li class="card_id"><%= topic.user.id %> <%= topic.user.name %> </li>
+       
+          <li class="card_sentence"><%= topic.sentence.name %></li>
+      <br>
+          <span class="card_birth">私(わたし)は  <%= topic.user.birth_country %> 出身(しゅっしん)です </span>
+      
+          <li class="card_pref">私(わたし)は <%= topic.user.prefecture.name %>に 住(す)んでいます </li>
+      <br>
+        <li class="card_identity"> 私(わたし)は Facebook や HelloTalkを 使(つか)います
+      
+         
+          <li> <%= topic.user.identity %> </li>
+        
+     </li>
+   </div>
+ 
+     <% end %>
     <% end %>
+  
   <% end %>
+ </div>
+</div>
 <% end %>
-<% end %>
+
 <br>
 <%= link_to '投稿する',new_topic_path %>
