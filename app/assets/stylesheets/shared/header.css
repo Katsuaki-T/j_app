@@ -1,5 +1,5 @@
 .container {
-  width: 1200px;
+  width: 1025px;
   padding: 0 40px;
   margin: 0 auto;
   background-color: #fbeb87;
@@ -19,9 +19,21 @@ header > .container{
   font-size: 16px;
   font-weight: bold;
 }
-#hl_left {
+#hl_top {
   margin-left: 30px;
 }
-#hl_right {
+#hl_under {
   margin-left: 87px;
+}
+
+.header_name {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: none;
+  margin-left: 40px;
+}
+.logout {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 80px;
 }

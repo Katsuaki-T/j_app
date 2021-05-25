@@ -1,0 +1,25 @@
+section {
+ 
+  
+  
+
+  justify-content: center;
+}
+
+.wrapper {
+  width: 1025px;
+  height: 50px;
+  padding: 0 40px;
+  margin: 0 auto;
+  background-color: #FFDBC9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.kind_japanese {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
