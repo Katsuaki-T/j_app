@@ -2,11 +2,11 @@ ja:
   activerecord:
     attributes:
       user:
-        name: 名前（なまえ）
-        birth_country: 生（う）まれた国（くに）
-        prefecture_id: 住（す）んでいる所（ところ）
+        name: 名前(なまえ)
+        birth_country: 生(う)まれた国(くに)
+        prefecture_id: 住(す)んでいる所(ところ)
       topic:
-        sentence_id: 文章（ぶんしょう）
-        description: 説明（せつめい）
+        sentence_id: 文章(ぶんしょう)
+        description: 説明(せつめい)
       comment:
-        text: 文章（ぶんしょう）
+        text: 文章(ぶんしょう)

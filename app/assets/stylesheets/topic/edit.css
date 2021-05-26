@@ -1,0 +1,32 @@
+.edit_container {
+  width: 1025px;
+  padding: 0 40px;
+  margin: 0 auto;
+  background-color: #84eacd;
+}
+.edit_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#topic_description {
+ 
+}
+textarea {
+  resize: none;
+  width:580px;
+  height:200px;
+}
+.select-box {
+  width: 363px;
+  margin-left: 113px;
+}
+.choice_sentence {
+  margin-left: 150px;
+}
+.explain_sentence {
+  margin-left: 10px;
+}
+.explain_btn {
+  margin-left: 260px;
+}

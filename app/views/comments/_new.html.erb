@@ -6,7 +6,9 @@
  <div class="comment_container">
     <div class="comment-box">
     <%if current_user.id != @topic.user.id %>
+    <div comment_center>
     <div class="comment_sentence">私(わたし)は <%= @topic.user.name%> さんと 話(はな)します</div>
+    </div>
     <% end %>
     <br>
     <%= form_with model: [@topic,@comment] do |f| %>
