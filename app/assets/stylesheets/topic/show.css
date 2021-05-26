@@ -1,0 +1,69 @@
+.card_wrapper_show {
+  width: 330px;
+  justify-content: center;
+  height: 180px;
+  margin-bottom: 30px;
+}
+
+.card_wrapper_show{
+  position: relative;
+  background: #fff0cd;
+  box-shadow: 0px 0px 0px 5px #fff0cd;
+  border: dashed 3px white;
+  padding: 0.1em 0.6em;
+  color: #454545;
+  
+}
+.card_wrapper_show:after{
+  position: absolute;
+  content: '';
+  right: -7px;
+  top: -7px;
+  border-width: 0 15px 15px 0;
+  border-style: solid;
+  border-color: #ffdb88 #fff #ffdb88;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+
+.card_birth_show {
+  margin-left: 80px;
+
+}
+.card_pref_show {
+  margin-left: 80px;
+}
+
+.show_description_main {
+  display: flex;
+  justify-content: center;
+}
+
+.show_description_wrapper {
+  width: 560px;
+  height: 180px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+.show_description_wrapper {
+  position: relative;
+  background: #f6cccc;
+  box-shadow: 0px 0px 0px 5px #f6cccc;
+  border: dashed 3px white;
+  padding: 0.1em 0.6em;
+  color: #454545;
+}
+.show_description_wrapper:after{
+  position: absolute;
+  content: '';
+  right: -7px;
+  top: -7px;
+  border-width: 0 15px 15px 0;
+  border-style: solid;
+  border-color: #f2bebe #fff #f9b1b1;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.show_description {
+  
+}

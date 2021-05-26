@@ -1,46 +1,46 @@
 <%= link_to 'root',root_path %>
-<table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-item">name</th>
-          <td class="detail-value"><%= @topic.user.name %> </td>
-        </tr>
 
-        <tr>
-          <th class="detail-item">birth_country</th>
-          <td class="detail-value"><%= @topic.user.birth_country %> </td>
-        </tr>
+<div class='main'>
+ <div class='inner'>
+   <ul class="topic_lists">
+     <div class="card_wrapper_show">
+      <br>
+       <li class="card">
 
-        <tr>
-          <th class="detail-item">sentence</th>
-          <td class="detail-value"><%= @topic.sentence.name %></td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">prefecture</th>
-          <td class="detail-value"><%= @topic.user.prefecture.name %> </td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">identity</th>
-          <td class="detail-value"><%= @topic.user.identity %> </td>
-        </tr>
-      </tbody>
- </table>
-
-<div class='description'>
-<tr>
-    <th class="detail-item">description</th>
-    <td class="detail-value"><%= @topic.description %></td>
-  </tr>
+            <li class="card_name"> <%= @topic.user.id %> <%= @topic.user.name %></li>
+              <br>
+           <li class="card_birth_show"> 私(わたし)は<br><%= @topic.user.birth_country %><br>出身(しゅっしん)です</li>
+            <br>
+           <li class="card_pref_show">私(わたし)は<br><%= @topic.user.prefecture.name %>に<br> 住(す)んでいます </li>
+            
+           <li class="card_updated_time"><%= @topic.user.updated_at.strftime('%Y/%m/%d')  %></li>
+            
+        </li>
+      </div>
+    </ul>   
+  </div>
 </div>
+
+ 
+
+<div class="show_description_main">
+    <div class="show_description_wrapper">
+        <div class="show_description"><%= @topic.description %></div>
+    </div>
+</div>
+
 <br>
+
 <% if user_signed_in? %>
   <%if current_user.id == @topic.user_id %>
   
-    <%= link_to "topicの編集", edit_topic_path(@topic.id), method: :get, class: "topic-red-btn" %>
-    <p class="or-text">or</p>
-    <%= link_to "topicの削除", topic_path, method: :delete, class:"topic-destroy" %>
+   私(わたし)は 文章(ぶんしょう)を 書(か)き直(なお)します
+   <div> <%= link_to image_tug("私(わたし)は 文章(ぶんしょう)を 書(か)き直(なお)します", edit_topic_path(@topic.id), method: :get, class: "edit-sentence" %></div>
+   <br>
+    <p class="or-text">もしくは</p>
+    <br>
+    私(わたし)は 文章(ぶんしょう)を 消(け)します
+    <div><%= link_to "私(わたし)は 文章(ぶんしょう)を 消(け)します", topic_path, method: :delete, class:"topic-destroy" %></div>
 
   <% end %>
 <% end %>
