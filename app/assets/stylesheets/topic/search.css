@@ -1,3 +1,18 @@
+.topic_choice_main {
+  width: 1025px;
+  margin: 0 auto;
+}
+.topic_choice_sentence {
+  margin-left: 340px;
+}
+.topic_choice_pulldown{
+  margin-left: 330px;
+  width: 200px;
+}
+.search_btn {
+  margin-left: 496px;
+}
+
 .inner {
   width: 1025px;
   margin: 0 auto;

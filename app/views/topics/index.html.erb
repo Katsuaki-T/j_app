@@ -4,14 +4,20 @@
 
 <%= link_to 'kind_japaneseへ',kind_japanese_index_path %>
 
-<div class="topic_search_main">
+<div class="topic_choice_main">
 <%= search_form_for @p, url: search_topics_path do |f| %>
+
+  <div class="topic_choice_sentence" >
   <%= f.label :name_eq, '私(わたし)は 文章(ぶんしょう)を 選(えら)びます' %>
-  <%= f.collection_select :sentence_id_eq, Sentence.all , :id, :name %>
-  <br>
-  <%= button_tag type: :submit ,class: "search_btn" do %>
-  <%= image_tag('banana.png',size:'30x20')  %>
-<% end %>
+  </div>
+<br>
+  <div class="topic_choice_pulldown"><%= f.collection_select :sentence_id_eq, Sentence.all , :id, :name %></div>
+
+  <div><%= button_tag type: :submit ,class: "search_btn" do %>
+       <%= image_tag('search.png',size: '40x40')  %>
+  <% end %>
+  <div>
+<br>
 </div>
 
 
