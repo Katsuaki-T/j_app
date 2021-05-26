@@ -6,22 +6,22 @@
 .topic_lists {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .card_wrapper {
-  
+ 
   justify-content: center;
   height: 150px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .card_wrapper{
   position: relative;
   background: #fff0cd;
   box-shadow: 0px 0px 0px 5px #fff0cd;
-  border: dashed 2px white;
-  padding: 0.2em 0.5em;
+  border: dashed 3px white;
+  padding: 0.1em 0.6em;
   color: #454545;
   
 }
@@ -35,21 +35,27 @@
   border-color: #ffdb88 #fff #ffdb88;
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
 }
-
-
-.card_id {
-  width: 100%;
-  margin: 0 auto;
+.card {
+  width: calc((100% - 10px) / 2);
+  margin-top: auto;
 }
+.card_name {
+  margin-top: -10px;
+}
+
 .card_sentence {
-  margin-left: 100px;
+  margin-left: 20px;
 }
 .card_birth {
-  margin-left: 60px;
-}
-.card_birth {
-  margin-left: 60px;
+  margin-left: 40px;
+
 }
 .card_pref {
-  margin-left: 73px;
+  margin-left: 40px;
+}
+.card_identity {
+  margin-left: 40px;
+}
+.card_identity_content {
+  margin-left: 40px;
 }

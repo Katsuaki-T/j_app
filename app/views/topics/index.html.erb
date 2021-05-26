@@ -30,18 +30,18 @@
     <div class="card_wrapper">
     <br>
       <li class="card">
-       <li class="card_id"><%= topic.user.id %> <%= topic.user.name %> </li>
-       
+       <li class="card_name"><%= topic.user.id %> <%= topic.user.name %> </li>
+       <br>
           <li class="card_sentence"><%= topic.sentence.name %></li>
-      <br>
+      
           <span class="card_birth">私(わたし)は  <%= topic.user.birth_country %> 出身(しゅっしん)です </span>
       
           <li class="card_pref">私(わたし)は <%= topic.user.prefecture.name %>に 住(す)んでいます </li>
       <br>
-        <li class="card_identity"> 私(わたし)は Facebook や HelloTalkを 使(つか)います
+        <li class="card_identity"> 私(わたし)は Facebookを 使(つか)います
       
          
-          <li> <%= topic.user.identity %> </li>
+          <li class="card_identity_content"> <%= topic.user.identity %> </li>
         
      </li>
    </div>
