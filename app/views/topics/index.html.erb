@@ -38,10 +38,12 @@
       
           <li class="card_pref">私(わたし)は <%= topic.user.prefecture.name %>に 住(す)んでいます </li>
       <br>
-        <li class="card_identity"> 私(わたし)は Facebookを 使(つか)います
+        <li class="card_identity"> 私(わたし)は Facebookを 使(つか)います<li>
       
          
           <li class="card_identity_content"> <%= topic.user.identity %> </li>
+      <br> 
+          <li class="card_updated_time"><%= topic.user.updated_at.strftime('%Y/%m/%d')  %></li>
         
      </li>
    </div>

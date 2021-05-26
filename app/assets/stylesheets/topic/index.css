@@ -12,7 +12,7 @@
 .card_wrapper {
  
   justify-content: center;
-  height: 150px;
+  height: 180px;
   margin-bottom: 30px;
 }
 
@@ -58,4 +58,9 @@
 }
 .card_identity_content {
   margin-left: 40px;
+}
+.card_updated_time {
+  
+  float: right;
+  font-size: 13px;
 }

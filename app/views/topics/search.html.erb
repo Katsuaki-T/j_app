@@ -1,13 +1,17 @@
 <h1>
   検索結果
 </h1>
-<%# 検索結果の個数で条件分岐 %>
-<% if @results.length !=0 %>
-  <% @results.each do |result| %>
-    <td>
+<div class='main'>
+ <div class='inner'>
+
+
+    <% if @results.length !=0 %>
+      <% @results.each do |result| %>
+    
     
  
-      <%= result.user.name %><br>
+      <%= result.user.id %> <%= result.user.name %>
+      <br>
       <%= result.user.birth_country %><br>
       <%= result.user.prefecture.name %><br>
       <%= result.user.identity %><br>
@@ -15,10 +19,14 @@
       <%= result.description %><br>
       <br>
     
-    </table>
-  <% end %>
+    
+
+
+    <% end %>
+  </div>
+</div>
 <% else %>
-  該当する商品はありません
+  あなたが 選んだ文章は ありません
+  <%= link_to '「やさしいHP」へ 戻りましょう', root_path %>
 <% end %>
 <br>
-<%= link_to 'トップページへ戻る', root_path %>
