@@ -1,24 +1,42 @@
 <h1>
   検索結果
 </h1>
-<%# 検索結果の個数で条件分岐 %>
-<% if @results.length !=0 %>
-  <% @results.each do |result| %>
-    <td>
+<div class='main'>
+ <div class='inner'>
+
+
+    <% if @results.length !=0 %>
+    <ul class="topic_lists">
+      <% @results.each do |result| %>
     
+    <div class="card_wrapper_search">
+    <br>
+      <li class="card">
  
-      <%= result.user.name %><br>
-      <%= result.user.birth_country %><br>
-      <%= result.user.prefecture.name %><br>
-      <%= result.user.identity %><br>
+     <li class="card_name"> <%= result.user.id %> <%= result.user.name %></li>
       <br>
-      <%= result.description %><br>
+     <li class="card_birth_search"> 私(わたし)は<br><%= result.user.birth_country %><br>出身(しゅっしん)です</li>
       <br>
+      <li class="card_pref_search">私(わたし)は<br><%= result.user.prefecture.name %>に<br> 住(す)んでいます </li>
+      
+    <li class="card_updated_time"><%= result.user.updated_at.strftime('%Y/%m/%d')  %></li>
+
+    </li>
+     
+    </div>
+
+   <div class="search_right_wrapper">
+      <div class="search_description"><%= result.description %>
+      </div>
+  </div>
+
+    <% end %>
     
-    </table>
-  <% end %>
+    </ul>
+  </div>
+</div>
 <% else %>
-  該当する商品はありません
+  あなたが 選んだ文章は ありません
+  <%= link_to '「やさしいHP」へ 戻りましょう', root_path %>
 <% end %>
 <br>
-<%= link_to 'トップページへ戻る', root_path %>

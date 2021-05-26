@@ -45,7 +45,7 @@ class TopicsController < ApplicationController
   end
 
   def search
-    @results = @p.result  # 検索条件にマッチした商品の情報を取得
+    @results = @p.result.order('created_at DESC')  # 検索条件にマッチした商品の情報を取得
   end
 
   private

@@ -4,59 +4,67 @@
 
 <%= link_to 'kind_japaneseへ',kind_japanese_index_path %>
 
-<h1>
-  sentence検索
-</h1>
+<div class="topic_choice_main">
 <%= search_form_for @p, url: search_topics_path do |f| %>
-  <%= f.label :name_eq, 'sentence名' %>
-  <%= f.collection_select :sentence_id_eq, Sentence.all , :id, :name %>
-  <br>
-  <%= f.submit '検索' %>
-  
+
+  <div class="topic_choice_sentence" >
+  <%= f.label :name_eq, '私(わたし)は 文章(ぶんしょう)を 選(えら)びます' %>
+  </div>
+<br>
+  <div class="topic_choice_pulldown"><%= f.collection_select :sentence_id_eq, Sentence.all , :id, :name %></div>
+
+  <div><%= button_tag type: :submit ,class: "search_btn" do %>
+       <%= image_tag('search.png',size: '40x40')  %>
+  <% end %>
+  <div>
+<br>
+</div>
+
 
 
 
 <div class='main'>
+ <div class='inner'>
+    <% if @topics[0] != nil %>
+     <ul class="topic_lists">
+        <% @topics.each do |topic| %>
 
-<% if @topics[0] != nil %>
-    <% @topics.each do |topic| %>
-      <div class='list'>
-<%= link_to topic_path(topic.id) do %>
-      </div class='table'>
- <table class="detail-table">
- <br>
-      <tbody>
+        
 
-       <tr>
-          <th class="detail-item">sentence</th>
-          <td class="detail-value"><%= topic.sentence.name %></td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">name</th>
-          <td class="detail-value"><%= topic.user.name %> </td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">birth_country</th>
-          <td class="detail-value"><%= topic.user.birth_country %> </td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">prefecture</th>
-          <td class="detail-value"><%= topic.user.prefecture.name %> </td>
-        </tr>
-
-        <tr>
-          <th class="detail-item">identity</th>
-          <td class="detail-value"><%= topic.user.identity %> </td>
-        </tr>
-      </tbody>
- </table>
-</div>
+    <%= link_to topic_path(topic.id) do %>
+     
+    <div class="card_wrapper">
+    <br>
+      <li class="card">
+       <li class="card_name"><%= topic.user.id %> <%= topic.user.name %> </li>
+       <br>
+          <li class="card_sentence"><%= topic.sentence.name %></li>
+      
+          <li class="card_birth">私(わたし)は  <%= topic.user.birth_country %> 出身(しゅっしん)です </li>
+      
+          <li class="card_pref">私(わたし)は <%= topic.user.prefecture.name %>に 住(す)んでいます </li>
+      <br>
+      <% if  topic.user.identity.present? %>
+        <li class="card_identity"> 私(わたし)は Facebookを 使(つか)います<li>
+      
+         
+          <li class="card_identity_content"> <%= topic.user.identity %> </li>
+       <% end %>
+      <br> 
+          <li class="card_updated_time"><%= topic.user.updated_at.strftime('%Y/%m/%d')  %></li>
+        
+     </li>
+     
+   </div>
+ 
+     <% end %>
     <% end %>
+  
   <% end %>
+  </ul>
+ </div>
+</div>
 <% end %>
-<% end %>
+
 <br>
 <%= link_to '投稿する',new_topic_path %>
