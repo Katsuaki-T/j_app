@@ -1,13 +1,13 @@
 <h2>Sign up</h2>
 
-<%= link_to 'root',root_path %>
+
 
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= render 'shared/error_messages', model: f.object %>
 <br>
 <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    
+    私の<%= f.label :name %>は<%= f.text_field :name, autofocus: true, autocomplete: "name" %>です。
   </div>
  <div class="field">
 
@@ -36,7 +36,7 @@
 
 <div class="field">
     <%= f.label :birth_country %>
-    <%= f.text_area :birth_country, autofocus: true, autocomplete: "birth_country" %>
+    <%= f.text_field :birth_country, autofocus: true, autocomplete: "birth_country" %>
   </div>
  <div class="field">
   地域
@@ -46,7 +46,7 @@
 </div>
 <div class="field">
     <%= f.label :identity  %><br />
-    <%= f.text_area :identity, autofocus: true, autocomplete: "identity" %>
+    <%= f.text_field :identity, autofocus: true, autocomplete: "identity" %>
   </div>
 
   <div class="actions">
