@@ -1,33 +1,47 @@
-<h2>Log in</h2>
+<%= render "shared/header2" %>
+<div class="session_top">
+<div class="session_top_sentence" >また「やさしいHP」へ私は入ります</div>
+
+</div>
+
+<div class='flash'>
+      
+      <%= flash[:alert]= "空欄に文字を入れてください。" %>
+</div>
+
+<div class='session_main'>
+<div class='session_container'>
 
 <br>
-      <%= flash[:notice] = '今は「やさしいHP」の外にいます'  %><br>
-      <%= flash[:alert]= "空欄に文字を入れてください。" %>
+     
       
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+  
     <br />
-    <div class="field">
-      私は「やさしいHP」へ  また 入りますから <br><br>
+    <div class="session_mail">
+     
       電子メール（めーる）<%= f.email_field :email, autofocus: true, autocomplete: "email" %>を書きます。
       </div>
-  </div>
-
   
-   <div class="field">
+
+  <br>
+   <div class="session_password">
       
       <% @minimum_password_length %>
       
       次に、暗証番号<%= f.password_field :password, autocomplete: "new-password" %>を書きます。
     </div>
-  
+  <br>
 
-  
+  </div>
 
-  <div><%= button_tag type: :submit ,class: "registration_btn" do %>
+  <div><%= button_tag type: :submit ,class: "session_btn" do %>
           <%= image_tag('explain.png',size: '30x30')  %>
         <% end %>
          </div>
 <% end %>
 
+</div>
+
+<%= render "shared/footer2" %>
