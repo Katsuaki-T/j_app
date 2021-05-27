@@ -1,9 +1,12 @@
 .topic_choice_main {
   width: 1025px;
+  
   margin: 0 auto;
+  /* background-color: #D9E5FF; */
 }
 .topic_choice_sentence {
-  margin-left: 340px;
+  margin-left: 436px;
+ 
 }
 .topic_choice_pulldown{
   margin-left: 330px;
@@ -19,6 +22,7 @@
 }
 
 .topic_lists {
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -106,6 +110,12 @@
 .search_description {
   
 }
+.search_not_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .search_not {
   margin-left: 400px;
 }

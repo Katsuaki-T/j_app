@@ -1,35 +1,47 @@
-<h2>Log in</h2>
+<%= render "shared/header2" %>
+<div class="session_top">
+<div class="session_top_sentence" >また「やさしいHP」へ私は入ります</div>
 
-<%= link_to 'root',root_path %>
+</div>
+
+<div class='flash'>
+      
+      <%= flash[:alert]= "空欄に文字を入れてください。" %>
+</div>
+
+<div class='session_main'>
+<div class='session_container'>
 
 <br>
-<%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post%><br>
-
-<%= flash[:notice] = '今は「やさしいHP」の外にいます'  %><br>
-      <%= flash[:alert]= "空欄に文字を入れてください。" %>
+     
       
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+  
+    <br />
+    <div class="session_mail">
+     
+      電子メール（めーる）<%= f.email_field :email, autofocus: true, autocomplete: "email" %>を書きます。
+      </div>
+  
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+  <br>
+   <div class="session_password">
+      
+      <% @minimum_password_length %>
+      
+      次に、暗証番号<%= f.password_field :password, autocomplete: "new-password" %>を書きます。
     </div>
-  <% end %>
+  <br>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
+
+  <div><%= button_tag type: :submit ,class: "session_btn" do %>
+          <%= image_tag('explain.png',size: '30x30')  %>
+        <% end %>
+         </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+</div>
+
+<%= render "shared/footer2" %>

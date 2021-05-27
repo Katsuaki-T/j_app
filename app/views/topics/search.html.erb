@@ -1,5 +1,6 @@
+ <%= render "shared/header" %>
 
-<div class='main'>
+<div class='topic_choice_main'>
  <div class='inner'>
 
 
@@ -33,6 +34,9 @@
     </ul>
   </div>
 </div>
+
+<%= render "shared/footer" %>
+
 <% else %>
 
 <div class="serach_not_main">
@@ -46,3 +50,4 @@
    <%= image_tag('return.png',size: '200x200',class: "return_btn ")  %> 
 <% end %>
 <br>
+

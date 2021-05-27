@@ -1,4 +1,4 @@
-<%= link_to 'root',root_path %>
+ <%= render "shared/header" %>
 
 <div class="edit_container">
  <div class="edit_wrapper">
@@ -8,7 +8,7 @@
         <%= render 'shared/error_messages', model: f.object %>
 
     <div class="field">
-    <div class="choice_sentence">私(わたしは 文章(ぶんしょう)を 選びます</div>
+    <div class="choice_sentence"> <ruby>私<rt>わたし</rt></ruby>は <ruby>文章<rt>ぶんしょう</rt></ruby>を <ruby>選<rt>えら</rt></ruby>びます</div>
       <br>
     <%= f.collection_select(:sentence_id, Sentence.all, :id, :name, {}, {class:"select-box", id:"topic-sentence"}) %>
     
@@ -19,7 +19,7 @@
 
    <div class="field">
 
-      <div class="explain_sentence">私(わたし)は この文章(ぶんしょう)について<%= f.label :description %>します</div>
+      <div class="explain_sentence"><ruby>私<rt>わたし</rt></ruby>は この<ruby>文章<rt>ぶんしょう</rt></ruby>について <ruby>説明<rt>せつめい</rt></ruby>します</div>
       <%= f.text_area :description, autofocus: true, autocomplete: "description" %>
     </div>
 
@@ -31,4 +31,9 @@
     </div>
  </div>  
 </div>
+
+
+</div>
+</div>
 <% end %>
+ <%= render "shared/footer" %>
