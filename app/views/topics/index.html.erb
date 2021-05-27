@@ -67,4 +67,11 @@
 <% end %>
 
 <br>
-<%= link_to '投稿する',new_topic_path %>
+
+
+<%# 投稿ボタン%>
+
+<%= link_to(new_topic_path, class: 'post-btn') do %>
+  <span class='post-btn-text'><ruby>文章<rt>ぶんしょう</rt></ruby> を<br><ruby>送<rt>おく</rt></ruby>ります</span>
+  <%= image_tag 'post.png' , size: '185x50' ,class: "post-btn-icon" %>
+<% end %>
