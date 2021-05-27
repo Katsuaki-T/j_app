@@ -1,0 +1,24 @@
+
+.comment_container {
+  width: 800px;
+  height: 215px;
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+  margin: 0 auto;
+  
+}
+
+.comment_sentence{
+  
+}
+
+#comment_text {
+  width: 500px;
+  height: 100px;
+
+}
+
+.comment_image {
+  margin-left: 220px;
+}

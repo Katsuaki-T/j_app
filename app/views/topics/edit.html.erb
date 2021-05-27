@@ -1,25 +1,32 @@
 <%= link_to 'root',root_path %>
-<header>
-  <div class="topics-sell-main">
-    <h2 class="topics-sell-title">sentenseを入力</h2>
+<div class="edit_container">
+
+ <div class="edit_wrapper">
     <%= form_with model:@topic, local: true do |f| %>
+   
+        <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="field">
+      
+      <div class="choice_sentence">私(わたしは 文章(ぶんしょう)を 選びます</div>
+      <br>
+      
+      <%= f.collection_select(:sentence_id, Sentence.all, :id, :name, {}, {class:"select-box", id:"topic-sentence"}) %>
+      
     </div>
- </header>
-    
-     <%= render 'shared/error_messages', model: f.object %>
-<div class="field">
-<span class="indispensable">必須</span>
+    <br>
+    <div class="field">
+        <div class="explain_sentence">私(わたし)は この文章(ぶんしょう)について <%= f.label :description %>し 直(なお)します</div>
+       <br>
+        <%= f.text_area :description, autofocus: true, autocomplete: "description" %>
+      </div>
 
-<%= f.collection_select(:sentence_id, Sentence.all, :id, :name, {}, {class:"select-box", id:"topic-sentence"}) %>
+      <div class="actions">
+       <div><%= button_tag type: :submit ,class: "explain_btn" do %>
+       <%= image_tag('explain.png',size: '40x40')  %>
+    <% end %>
+       
+      </div>
+ </div>
 </div>
-
-<div class="field">
-    <%= f.label :description  %><br />
-    <%= f.text_area :description, autofocus: true, autocomplete: "description" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "へんこう" %>
-    <%=link_to 'もどる', topic_path(@topic.id), class:"back-btn" %>
-  </div>
 <% end %>

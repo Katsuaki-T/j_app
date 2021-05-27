@@ -1,6 +1,4 @@
-<h1>
-  検索結果
-</h1>
+
 <div class='main'>
  <div class='inner'>
 
@@ -36,7 +34,15 @@
   </div>
 </div>
 <% else %>
-  あなたが 選んだ文章は ありません
-  <%= link_to '「やさしいHP」へ 戻りましょう', root_path %>
+
+<div class="serach_not_main">
+<br>
+  <div class="search_not">あなたが 選んだ文章は ありません</div>
+<br>
+  <div class="search_return"><%= link_to '「やさしいHP」へ 戻りましょう', root_path %> </div>
+  </div>
+  <br>
+  <br>
+   <%= image_tag('return.png',size: '200x200',class: "return_btn ")  %> 
 <% end %>
 <br>
