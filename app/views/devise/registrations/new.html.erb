@@ -1,54 +1,63 @@
-<h2>Sign up</h2>
+<div class='registration_main'>
+<div class='registration_container'>
+<%# <h2>Sign up</h2> %>
 
 
 
-<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-  <%= render 'shared/error_messages', model: f.object %>
-<br>
-<div class="field">
-    
-    私の 名前は<%= f.text_field :name, autofocus: true, autocomplete: "name" %>です。
-  </div>
+  <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
   <br>
- <div class="field">
- 私の国は<%= f.text_field :birth_country, autofocus: true, autocomplete: "birth_country" %>で、
- 今は<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"registration_select-box", id:"item-prefecture"}) %>に 住んでいます。
-  </div >
-<br>
-    <div class="field">
-    私は「やさしいHP」へ （また） 入りますから
-最初に電子メール（めーる）<%= f.email_field :email, autofocus: true, autocomplete: "email" %>を書きます。
+  <div class="field">
+      
+      私の 名前は<%= f.text_field :name, autofocus: true, autocomplete: "name", :size => "20*30" %>です。
     </div>
+    <br>
+  <div class="field">
+  私の国は<%= f.text_field :birth_country, autofocus: true, autocomplete: "birth_country" %>で、
+  今は<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"registration_select-box", id:"item-prefecture"}) %>に 住んでいます。
+    </div >
+  <br>
+      <div class="field">
+      私は「やさしいHP」へ  入りますから <br><br>
+  最初に、電子メール（めーる）<%= f.email_field :email, autofocus: true, autocomplete: "email" %>を書きます。
+      </div>
+      
     
-  </div>
-<br>
-<%if @sns_id.present? %>
-   <%= hidden_field_tag :sns_auth, true %>
+  <br>
+  <%if @sns_id.present? %>
+    <%= hidden_field_tag :sns_auth, true %>
 
-  <% else %>
-   <div class="field">
+    <% else %>
+    <div class="field">
+      
+      <% @minimum_password_length %>
+      
+      次に、暗証番号<%= f.password_field :password, autocomplete: "new-password" %>を書きます。
+    </div>
+    <br>
+    <div class="field">
+      
+      間違えないように、もう一度、暗証番号<%= f.password_field :password_confirmation, autocomplete: "new-password" %>を書きます。
+    </div>
+  <% end %>
+
+  <br>
+  <div class="field">
+      私はFacebookを持っているので、そのURLを書いてもいいです。
+  <br>
+  <br>
+      <%= f.text_field :identity, autofocus: true, autocomplete: "identity" , :size => "29*30",class: "identity_field"%>
+    </div>
+  <br>
     
-     <% @minimum_password_length %>
-     
-     次に、暗証番号<%= f.password_field :password, autocomplete: "new-password" %>を書きます。
-   </div>
 
-   <div class="field">
-    
-     間違えないように、もう一度、暗証番号<%= f.password_field :password_confirmation, autocomplete: "new-password" %>を書きます。
-   </div>
- <% end %>
+<%# <%= render "devise/shared/links" %> 
 
-<br>
-<div class="field">
-    私はFacebookを持っているので、そのURLを書いてもいいです。
-<br>
-    <%= f.text_field :identity, autofocus: true, autocomplete: "identity" %>
-  </div>
-<br>
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%# <%= render "devise/shared/links" %> %>
+</div>
+   
+          <div><%= button_tag type: :submit ,class: "registration_btn" do %>
+          <%= image_tag('explain.png',size: '30x30')  %>
+        <% end %>
+         </div>
+    <% end %>
+</div>

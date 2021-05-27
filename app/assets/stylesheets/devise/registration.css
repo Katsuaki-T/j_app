@@ -1,0 +1,19 @@
+.registration_main {
+  width: 1025px;
+  margin: 0 auto;
+  padding: 0 40px;
+  background-color: bisque;
+  
+
+}
+.registration_container {
+  display: flex;
+  justify-content: center;
+}
+.registration_btn {
+  margin-left: 450px;
+}
+
+.identity_field {
+  margin-left: 180px;
+}
