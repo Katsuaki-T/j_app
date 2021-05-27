@@ -1,14 +1,21 @@
 <%= render "shared/header2" %>
 
-<h1> Test</h1>
 
-<%= link_to 'kind_japaneseへ',kind_japanese_index_path %>
+
+
+ <div class="kind_wrapper">
+  <span style="font-family: Comic Sans MS;">
+    <div class="kind_japanese">
+    <a href="/kind_japanese">「やさしい<ruby>日本語<rt>にほんご</rt></ruby>」を あなたは <ruby>知<rt>し</rt></ruby>って いますか？？ </a>
+    </div>
+    </span>
+  </div>
 
 <div class="topic_choice_main">
 <%= search_form_for @p, url: search_topics_path do |f| %>
 
   <div class="topic_choice_sentence" >
-  <%= f.label :name_eq, '私(わたし)は 文章(ぶんしょう)を 選(えら)びます' %>
+<ruby>私<rt>わたし</rt></ruby>は <ruby>文章<rt>ぶんしょう</rt></ruby>を <ruby>選<rt>えら</rt></ruby>びます
   </div>
 <br>
   <div class="topic_choice_pulldown"><%= f.collection_select :sentence_id_eq, Sentence.all , :id, :name %></div>

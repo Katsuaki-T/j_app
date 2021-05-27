@@ -1,9 +1,11 @@
 .topic_choice_main {
   width: 1025px;
   margin: 0 auto;
+  /* background-color: #D9E5FF; */
 }
 .topic_choice_sentence {
-  margin-left: 340px;
+  margin-left: 436px;
+ 
 }
 .topic_choice_pulldown{
   margin-left: 330px;
