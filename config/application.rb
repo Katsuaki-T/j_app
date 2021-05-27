@@ -8,6 +8,8 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
+
 module JApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -21,5 +23,6 @@ module JApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
   end
 end

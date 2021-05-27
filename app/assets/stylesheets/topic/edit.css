@@ -2,7 +2,7 @@
   width: 1025px;
   padding: 0 40px;
   margin: 0 auto;
-  background-color: #84eacd;
+  background-color: #AEFFBD;
 }
 .edit_wrapper {
   display: flex;
@@ -25,7 +25,7 @@ textarea {
   margin-left: 150px;
 }
 .explain_sentence {
-  margin-left: 10px;
+  margin-left: 55px;
 }
 .explain_btn {
   margin-left: 260px;
