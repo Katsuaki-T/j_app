@@ -18,6 +18,7 @@
       <div id='comments'>
     <% @topic.comments.each do |comment| %>
       <p><%= comment.text %></p>
+      <p class="comment_time"><%= comment.updated_at.strftime("%Y-%m-%d %H:%M:%S")  %></p>
     <% end %>
     </div>
       <div class= 'comment_image'>
