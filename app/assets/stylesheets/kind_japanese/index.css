@@ -20,8 +20,6 @@
 .q_a {
   width: 1025px;
   margin: 0 auto;
-  
-
 }
 
 .cp_qa *, .cp_qa *:after, .cp_qa *:before {
@@ -93,4 +91,14 @@
 	padding: 0.2em 0.55em;
 	content: '!';
 	background: #0097a7;
+}
+.last_say {
+	width: 385px;
+	background-color: aquamarine;
+	/* margin: 0 3em 3em 3em; */
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+	border-radius: 0.3em;
+	margin-left: 355px;
+	margin-bottom: 2em;
+	font-weight: bold;
 }
