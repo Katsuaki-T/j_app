@@ -1,11 +1,12 @@
 
 .comment_container {
   width: 800px;
-  height: 215px;
+  
   display: flex;
   justify-content: center;
   padding: 0 40px;
   margin: 0 auto;
+  text-align: center;
   
 }
 
@@ -16,9 +17,15 @@
 #comment_text {
   width: 500px;
   height: 100px;
+  margin-bottom: 10px;
 
 }
 
 .comment_image {
-  margin-left: 220px;
+ margin-top: 10px;
+ margin-bottom: 20px;
+}  
+.comment_time {
+  margin-top: 6px;
+  margin-bottom: 20px;
 }
