@@ -1,3 +1,19 @@
+
+
+.flower_main {
+
+  width: 1025px;
+  margin: 0 auto;
+}
+
+.flower {
+	
+	height: 640px;
+	background-image: url(flower.jpg);
+	
+	background-size: cover;
+}
+
 .inner {
   width: 1025px;
   margin: 0 auto;
