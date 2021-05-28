@@ -12,7 +12,7 @@
   border: dashed 3px white;
   padding: 0.1em 0.6em;
   color: #454545;
-  
+  border-radius: 0.4em;
 }
 .card_wrapper_show:after{
   position: absolute;
@@ -52,6 +52,7 @@
   border: dashed 3px white;
   padding: 0.1em 0.6em;
   color: #454545;
+  border-radius: 0.4em;
 }
 .show_description_wrapper:after{
   position: absolute;

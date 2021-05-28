@@ -9,6 +9,7 @@
   border: dashed 3px white;
   padding: 0.1em 0.6em;
   color: #454545;
+  border-radius: 0.4em;
 }
 .edit_wrapper {
   display: flex;

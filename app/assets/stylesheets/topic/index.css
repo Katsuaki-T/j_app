@@ -12,6 +12,7 @@
 	background-image: url(flower3.png);
 	
 	background-size: contain;
+  border-radius: 0.4em;
 }
 
 .inner {
@@ -39,6 +40,7 @@
   border: dashed 3px white;
   padding: 0.1em 0.6em;
   color: #454545;
+  border-radius: 0.4em;
   
 }
 .card_wrapper:after{

@@ -2,7 +2,8 @@
   width: 1025px;
   padding: 0 40px;
   margin: 0 auto;
-  background-color: #fbeb87;
+  background-color: #FFFFAA;
+  border-radius: 0.4em;
 }
 header > .container{
   height:88px;

@@ -42,6 +42,7 @@
   border: dashed 3px white;
   padding: 0.1em 0.6em;
   color: #454545;
+  border-radius: 0.4em;
   
 }
 .card_wrapper_search:after{
@@ -95,6 +96,7 @@
   border: dashed 3px white;
   padding: 0.1em 0.6em;
   color: #454545;
+  border-radius: 0.4em;
 }
 .search_right_wrapper:after{
   position: absolute;
