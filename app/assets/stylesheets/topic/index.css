@@ -8,10 +8,10 @@
 
 .flower {
 	
-	height: 640px;
-	background-image: url(flower.png);
+	height: 580px;
+	background-image: url(flower3.png);
 	
-	background-size: cover;
+	background-size: contain;
 }
 
 .inner {
@@ -91,7 +91,7 @@
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
-  right: 32px;
+  right: 18px;
   position: fixed;
   padding: 1px;
 }
