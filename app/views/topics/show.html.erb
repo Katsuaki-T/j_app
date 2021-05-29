@@ -40,7 +40,10 @@
     <div class="or-text">もしくは</div>
     <br>
    <div> 私(わたし)は 文章(ぶんしょう)を 消(け)します</div>
-    <div><%= link_to image_tag("delete.png"), topic_path, method: :delete, class:"delete-btn" %></div>
+    <div><%= link_to image_tag("delete.png"), topic_path, method: :delete, class:"delete-btn" ,data: { confirm: 'あなたは 本当(ほんとう)に この文章(ぶんしょう)を 消(け)しますか？' } %></div>
+
+
+
  </div>
   <% end %>
  <% end %>
