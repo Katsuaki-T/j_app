@@ -104,6 +104,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 300px;
 }
 
 .search_not {
@@ -114,4 +115,5 @@
 }
 .return_btn {
   margin-left: 430px;
+  margin-bottom: 20px;
 }
