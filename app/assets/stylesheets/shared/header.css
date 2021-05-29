@@ -20,9 +20,6 @@ header > .container{
   font-size: 16px;
   font-weight: bold;
 }
-
-
-
 #hl_top {
   margin-left: 30px;
 }
@@ -31,13 +28,13 @@ header > .container{
 }
 
 .header_name {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   cursor: none;
   margin-left: 40px;
 }
 .logout {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   margin-right: 80px;
 }
