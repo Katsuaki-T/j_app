@@ -6,21 +6,24 @@
  <div class="comment_container">
     <div class="comment-box">
     <%if current_user.id != @topic.user.id %>
-    <div comment_center>
+   
     <div class="comment_sentence">私(わたし)は <%= @topic.user.name%> さんと 話(はな)します</div>
     </div>
     <% end %>
     <br>
+
     <%= form_with model: [@topic,@comment] do |f| %>
       <%= f.text_area :text %>
       
       
       <div id='comments'>
     <% @topic.comments.each do |comment| %>
-      <p><%= comment.text %></p>
-      <p class="comment_time"><%= comment.updated_at.strftime("%Y-%m-%d %H:%M:%S")  %></p>
-    <% end %>
+      <p class="comment_contain"><%= comment.text %></p>
+      <p class="comment_time"> <%= comment.updated_at.strftime("%Y-%m-%d %H:%M:%S")  %></p>
+   
+ <% end %>
     </div>
+    
       <div class= 'comment_image'>
         <button type="submit" class="comment-btn">
           
@@ -28,7 +31,8 @@
         </button>
         </div>
       <% end %>
-    </div>
-  </div>
+     </div>
+   </div>
+ </div>
 </div>
  <% end %>
