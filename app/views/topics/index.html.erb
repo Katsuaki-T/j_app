@@ -27,7 +27,7 @@
   <div><%= button_tag type: :submit ,class: "search_btn" do %>
        <%= image_tag('search.png',size: '40x40')  %>
   <% end %>
-  <div>
+  </div>
 <br>
 </div>
 
@@ -62,7 +62,7 @@
           <li class="card_identity_content"> <%= topic.user.identity %> </li>
        <% end %>
       <br> 
-          <li class="card_updated_time"><%= topic.user.updated_at.strftime('%Y/%m/%d')  %></li>
+          <li class="card_updated_time"><%= topic.updated_at.strftime('%Y/%m/%d')  %></li>
         
      </li>
      

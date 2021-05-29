@@ -1,19 +1,33 @@
 .topic_choice_main {
   width: 1025px;
+  height: 170px;
+
   
   margin: 0 auto;
-  /* background-color: #D9E5FF; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .topic_choice_sentence {
-  margin-left: 436px;
+  margin-top: 20px;
+  
+  /* margin-left: 436px; */
  
 }
 .topic_choice_pulldown{
-  margin-left: 330px;
+	margin-bottom: 15px;
+	padding: 7px 30px 7px 10px;
+	font-size: 93%;
+	line-height: 1.1em;
+	border-radius: 0.4em;
+	border: none;
+
+   margin-right: 100px; 
   width: 200px;
 }
 .search_btn {
-  margin-left: 496px;
+ 
+  margin-left: 140px; 
 }
 
 .inner {
