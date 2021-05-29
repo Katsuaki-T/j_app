@@ -21,15 +21,20 @@
   justify-content: center;
   align-items: center;
   
+  
 }
 .topic_choice_sentence {
-  margin-top: 20px;
-  
-  /* margin-left: 436px; */
+  margin-top: 15px;
+  line-height: 1.8;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 100px;
  
 }
 .topic_choice_pulldown{
-	margin-bottom: 15px;
+	
+  margin-bottom: 15px;
 	padding: 7px 30px 7px 10px;
 	font-size: 93%;
 	line-height: 1.1em;
@@ -41,7 +46,7 @@
   width: 200px;
 }
 .search_btn {
- margin-left: 160px ;
+ margin-left: 150px ;
  
 }
 
@@ -51,7 +56,7 @@
 }
 
 .topic_lists {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
