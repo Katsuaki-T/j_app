@@ -50,6 +50,7 @@
    <%= image_tag('return.png',size: '200x200',class: "return_btn ")  %> 
 <% end %>
 
+<% if @results.length == 0 %>
 <footer>
 
   <div class="container_f">
@@ -61,5 +62,6 @@
   </div>
 
 </footer>
+<% end %>
 <br>
 
