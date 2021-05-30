@@ -74,7 +74,14 @@
   flex-direction: column;
   text-align: center;
 }
+.show_sentence, .or-text {
+  line-height: 1.8;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+}
+
 .or-text {
   margin-top: 10px;
-  font-weight: bold;
+  font-size: 16px;
 }
