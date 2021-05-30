@@ -16,16 +16,17 @@
   <br>
   <div class="field">
       
-      私の 名前は<%= f.text_field :name, autofocus: true, autocomplete: "name", :size => "20*30" %>です。
+      私の <span style="font-weight:800;">名前</span>は<%= f.text_field :name, autofocus: true, autocomplete: "name", :size => "20*30" %>です。
     </div>
     <br>
   <div class="field">
-  私の国は<%= f.text_field :birth_country, autofocus: true, autocomplete: "birth_country" %>で、
-  今は<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"registration_select-box", id:"item-prefecture"}) %>に 住んでいます。
+  私の<span style="font-weight:800;">国</span>は<%= f.text_field :birth_country, autofocus: true, autocomplete: "birth_country" %>で、
+  今は<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"registration_select-box", id:"item-prefecture"}) %>
+  に <span style="font-weight:800;">住んで</span>います。
     </div >
   <br>
       <div class="field">
-      私は「やさしいHP」へ  入りますから <br><br>
+      私は「やさしいHP」へ  入りますから <br>
   最初に、電子メール（めーる）<%= f.email_field :email, autofocus: true, autocomplete: "email" %>を書きます。
       </div>
       
@@ -39,20 +40,20 @@
       
       <% @minimum_password_length %>
       
-      次に、暗証番号<%= f.password_field :password, autocomplete: "new-password" %>を書きます。
+      次に、<span style="font-weight:800;">暗証番号</span><%= f.password_field :password, autocomplete: "new-password" %>を書きます。
     </div>
     <br>
     <div class="field">
       
-      間違えないように、もう一度、暗証番号<%= f.password_field :password_confirmation, autocomplete: "new-password" %>を書きます。
+      間違えないように、もう一度、<span style="font-weight:800;">暗証番号</span><%= f.password_field :password_confirmation, autocomplete: "new-password" %>を書きます。
     </div>
   <% end %>
 
   <br>
   <div class="field">
-      私はFacebookを持っているので、そのURLを書いてもいいです。
+      私は<span style="font-weight:900;">Facebook</span>を持っているので、そのURLを書いてもいいです。
   <br>
-  <br>
+  
       <%= f.text_field :identity, autofocus: true, autocomplete: "identity" , :size => "29*30",class: "identity_field"%>
     </div>
   <br>

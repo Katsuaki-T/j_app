@@ -3,7 +3,7 @@
   height: 50px;
   margin: 0 auto;
   padding: 0 40px;
-  background-color: red;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,9 +13,17 @@
   display: flex;
   
   justify-content: center;
-  background-color: red;
-  margin: 0 auto;
   
+  margin: 0 auto;
+  margin-bottom: 15px;
+  
+}
+.session_top, .flash {
+  line-height: 2.2;
+	font-family: 'Noto Sans JP', sans-serif;
+ font-weight: 800;
+ color: #FF4500;
+ font-size: 19px;
 }
 
 
@@ -23,19 +31,33 @@
   width: 1025px;
   margin: 0 auto;
   padding: 0 40px;
-  background-color: bisque;
+  background-color: #fff0cd;
+  box-shadow: 0px 0px 0px 5px #fff0cd;
+  border: dashed 3px white;
+  padding: 0.1em 0.6em;
+  color: #454545;
+  border-radius: 0.4em;
   
 
 }
 .session_container {
   display: flex;
   justify-content: center;
+  line-height: 1.8;
+  font-size: 18px;
+  font-family: 'M PLUS 1p', sans-serif;
+  
+
 }
 .session_btn {
-  margin-left: 450px;
+  margin-top: 15px;
+  margin-left: 468px;
   margin-bottom: 10px;
 }
 
 .session_password {
   margin-left: 30px;
+}
+.session_space {
+  height: 30px;
 }

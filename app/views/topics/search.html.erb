@@ -49,5 +49,19 @@
   <br>
    <%= image_tag('return.png',size: '200x200',class: "return_btn ")  %> 
 <% end %>
+
+<% if @results.length == 0 %>
+<footer>
+
+  <div class="container_f">
+    <div class="footer_logo">
+      <%= link_to image_tag("logo.png"), root_path, class:"footer_image_logo" %>
+    </div>
+    <div class="copy_right"><p>Copyright © 2021 K.T. Inc. All Rights Reserved. </p></div>
+    
+  </div>
+
+</footer>
+<% end %>
 <br>
 
