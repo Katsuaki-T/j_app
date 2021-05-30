@@ -40,13 +40,13 @@
 	line-height: 1.1em;
 	border-radius: 0.4em;
 	border: none;
-  margin-right: 120px;
+  margin-right: 125px;
 
    
   width: 200px;
 }
 .search_btn {
- margin-left: 150px ;
+ margin-left: 155px ;
  
 }
 
@@ -65,8 +65,9 @@
 .card_wrapper {
  
   justify-content: center;
-  height: 180px;
+  height: 190px;
   margin-bottom: 30px;
+  
 }
 
 .card_wrapper{
@@ -92,15 +93,20 @@
 .card {
   width: calc((100% - 10px) / 2);
   margin-top: auto;
+  
 }
 .card_name {
-  font-size:17px;
+  font-size:18ppx;
   margin-top: -10px;
+  
 }
 
-.card_sentence {
-  font-size:17px;
+.topic_card_sentence {
+  font-size:110%;
   margin-left: 20px;
+  
+  color: maroon;
+  font-weight: bold;
 }
 .card_birth {
   margin-left: 40px;
@@ -111,9 +117,11 @@
 }
 .card_identity {
   margin-left: 40px;
+  
 }
 .card_identity_content {
   margin-left: 40px;
+  
 }
 .card_updated_time {
   
