@@ -42,5 +42,7 @@ textarea {
  font-size: 18px;
 }
 .explain_btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 260px;
 }

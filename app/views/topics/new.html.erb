@@ -7,7 +7,7 @@
 
         <%= render 'shared/error_messages', model: f.object %>
 
-    <div class="field">
+    <div class="new_field">
     <div class="choice_sentence"> <ruby>私<rt>わたし</rt></ruby>は <ruby>文章<rt>ぶんしょう</rt></ruby>を <ruby>選<rt>えら</rt></ruby>びます</div>
       <br>
     <%= f.collection_select(:sentence_id, Sentence.all, :id, :name, {}, {class:"select-box", id:"topic-sentence"}) %>
@@ -17,7 +17,7 @@
 
    <br>
 
-   <div class="field">
+   <div class="new_field">
 
       <div class="explain_sentence"><ruby>私<rt>わたし</rt></ruby>は この<ruby>文章<rt>ぶんしょう</rt></ruby>について <ruby>説明<rt>せつめい</rt></ruby>します</div>
       <%= f.text_area :description, autofocus: true, autocomplete: "description" %>
