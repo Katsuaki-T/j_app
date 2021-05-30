@@ -7,7 +7,7 @@
    
         <%= render 'shared/error_messages', model: f.object %>
 
-    <div class="field">
+    <div class="edit_field">
       <br>
       <div class="choice_sentence">
       <ruby>私<rt>わたし</rt></ruby>は <ruby>文章<rt>ぶんしょう</rt></ruby>を <ruby>選<rt>えら</rt></ruby>び <ruby>直<rt>なお</rt></ruby>します</div>
@@ -18,7 +18,7 @@
     </div>
 
     <br>
-    <div class="field">
+    <div class="edit_field">
         <div class="explain_sentence"><ruby>私<rt>わたし</rt></ruby>は この<ruby>文章<rt>ぶんしょう</rt></ruby>について <ruby>説明<rt>せつめい</rt></ruby>し <ruby>直<rt>なお</rt></ruby>します</div>
        <br>
         <%= f.text_area :description, autofocus: true, autocomplete: "description" %>
