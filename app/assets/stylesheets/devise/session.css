@@ -8,22 +8,14 @@
   justify-content: center;
   align-items: center;
 }
-.flash {
-  width: 1025px;
-  display: flex;
-  
-  justify-content: center;
-  
-  margin: 0 auto;
-  margin-bottom: 15px;
-  
-}
-.session_top, .flash {
+
+.session_top {
   line-height: 2.2;
 	font-family: 'Noto Sans JP', sans-serif;
  font-weight: 800;
  color: #FF4500;
  font-size: 19px;
+ letter-spacing: 0.1em;
 }
 
 
@@ -47,8 +39,19 @@
   font-size: 18px;
   font-family: 'M PLUS 1p', sans-serif;
   
-
 }
+.flash_error {
+  font-size: 1.3vw;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+  line-height: 1.6;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin-bottom: 15px;
+  
+}
+
+
 .session_btn {
   margin-top: 15px;
   margin-left: 468px;
@@ -56,7 +59,7 @@
 }
 
 .session_password {
-  margin-left: 30px;
+  
 }
 .session_space {
   height: 30px;

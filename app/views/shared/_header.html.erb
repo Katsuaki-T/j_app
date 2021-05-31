@@ -11,7 +11,7 @@
     <ul class='top_in_header'>
     <% if user_signed_in? %>
 
-    <li><%= link_to current_user.name ,"#",  class: "header_name" %> <span style="font-weight:700;">さん が 入っています</span></li>
+    <li><%= link_to current_user.name ,"#",  class: "header_name" %> <span style="font-weight:700;">さん が <ruby>入<rt>はい</rt></ruby>って います</span></li>
     <li class="logout"><%= link_to image_tag('logout.png',size: '20x20'), destroy_user_session_path, method: :delete  %>
     <span style="font-family: Comic Sans MS;">
 
@@ -35,18 +35,18 @@
       <li class="header_list" id="hl_left"><%= link_to image_tag("login.png"), new_user_registration_path %>
 
       <%= link_to new_user_registration_path do %>
-      <ruby>新<rt>あたら</rt></ruby>しく「やさしいHP」へ <ruby>私<rt>わたし</rt></ruby>は <ruby>入<rt>はい</rt><ruby>ります</li>
+      <ruby>新<rt>あたら</rt></ruby>しく「やさしいHP」へ <ruby>私<rt>わたし</rt></ruby>は <ruby>入<rt>はい</rt></ruby>ります</li>
        <% end %>
 
      
       <li class="header_list" id="hl_center"><%= link_to image_tag("login.png"), user_facebook_omniauth_authorize_path, method: :post %>
        <%= link_to user_facebook_omniauth_authorize_path, method: :post do %>
-      Facebookで「やさしいHP」へ <ruby>私<rt>わたし</rt></ruby>は <ruby>入<rt>はい</rt><ruby>ります</li>
+      Facebookで「やさしいHP」へ <ruby>私<rt>わたし</rt></ruby>は <ruby>入<rt>はい</rt></ruby>ります</li>
       <% end %>
       
       <li class="header_list" id="hl_right"><%= link_to image_tag("login.png"), new_user_session_path %>
       <%= link_to new_user_session_path do %>
-      また「やさしいHP」へ <ruby>私<rt>わたし</rt></ruby>は  <ruby>入<rt>はい</rt><ruby>ります</li>
+      また「やさしいHP」へ <ruby>私<rt>わたし</rt></ruby>は  <ruby>入<rt>はい</rt></ruby>ります</li>
       <% end %>
 
       </span>

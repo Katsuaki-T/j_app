@@ -14,20 +14,21 @@
 	line-height: 1.7;
 	font-family: 'M PLUS 1p', sans-serif;
  font-weight: 800;
- color: #FF4500;
+ 
  font-size: 27px;
- letter-spacing: 0.2em;
-  /* font-size: px; */
-  
+ letter-spacing: 0.1em;
+ margin-top: 10px;
+ margin-bottom: 10px;
 }
 
 .q_a {
   width: 1025px;
   margin: 0 auto;
+	letter-spacing: 0.2em;
 }
 
 .cp_qa *, .cp_qa *:after, .cp_qa *:before {
-	font-family: 'FontAwesome', sans-serif;
+	font-family: 'Noto Sans JP', sans-serif;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
@@ -96,13 +97,15 @@
 	content: '!';
 	background: #0097a7;
 }
+.url {
+	font-size: small;
+	
+}
 .last_say {
-	width: 385px;
+	width: 400px;
 	background-color: aquamarine;
-	/* margin: 0 3em 3em 3em; */
-	box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
 	border-radius: 0.3em;
-	margin-left: 355px;
+	margin-left: 300px;
 	margin-bottom: 2em;
 	font-family: 'FontAwesome', sans-serif;
 	font-weight: bold;

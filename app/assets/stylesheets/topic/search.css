@@ -1,8 +1,6 @@
 .topic_choice_main {
   width: 1025px;
   margin: 0 auto;
-  
-  
 }
 .inner {
   width: 1025px;
@@ -97,9 +95,6 @@
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
-.search_description {
-  
-}
 .search_not_main {
   display: flex;
   justify-content: center;
@@ -116,4 +111,7 @@
 .return_btn {
   margin-left: 430px;
   margin-bottom: 20px;
+}
+.success {
+  font-family: 'Noto Sans JP', sans-serif;
 }

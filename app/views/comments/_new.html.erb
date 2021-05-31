@@ -6,7 +6,7 @@
     <div class="comment-box">
     <%if current_user.id != @topic.user.id %>
    
-    <div class="comment_sentence">私(わたし)は <%= @topic.user.name%> さんと 話(はな)します</div>
+    <div class="comment_sentence"><ruby>私<rt>わたし</rt></ruby>は <%= @topic.user.name%> さんと <ruby>話<rt>はな</rt></ruby>します</div>
     </div>
     <% end %>
     <br>
