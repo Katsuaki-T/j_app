@@ -14,11 +14,11 @@
 	line-height: 1.7;
 	font-family: 'M PLUS 1p', sans-serif;
  font-weight: 800;
- color: #FF4500;
+ 
  font-size: 27px;
- letter-spacing: 0.2em;
-  /* font-size: px; */
-  
+ letter-spacing: 0.1em;
+ margin-top: 10px;
+ margin-bottom: 10px;
 }
 
 .q_a {

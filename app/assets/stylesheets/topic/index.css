@@ -1,4 +1,13 @@
 
+.index_kind_japanese {
+	line-height: 1.7;
+	font-family: 'M PLUS 1p', sans-serif;
+ font-weight: 800;
+ color: #FF4500;
+ font-size: 27px;
+ letter-spacing: 0.2em;
+}
+
 .flower_main {
 
   width: 1025px;
