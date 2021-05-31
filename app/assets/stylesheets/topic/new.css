@@ -14,12 +14,27 @@
 .new_wrapper {
   display: flex;
   justify-content: center;
-  
- 
+}
+.new_field {
+  margin-bottom: 0px;
 }
 
-
-
-.new_field {
-  align-content: center;
+.new_choice_sentence {
+  margin-left: 190px;
+  line-height: 0.8;
+}
+.new_select-box {
+  width: 363px;
+  margin-left: 113px;
+  margin-top: 0px;
+}
+.new_explain_sentence {
+  margin-left: 146px;
+}
+.new_choice_sentence, .new_explain_sentence {
+  line-height: 2;
+	font-family: 'Noto Sans JP', sans-serif;
+ font-weight: 700;
+ 
+ font-size: 18px;
 }
