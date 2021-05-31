@@ -1,24 +1,23 @@
 <%= render "shared/header" %>
 <div class="session_top">
 <div class="session_top_sentence" >また「やさしいHP」へ私は入ります</div>
-
-</div>
-
-<div class='flash'>
-      
-      <%= flash[:alert]= "空欄に文字を入れてください。" %>
 </div>
 
 <div class='session_main'>
 <div class='session_container'>
 
-<br>
+<%# <br> %>
      
       
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_with model: @user, url: user_session_path,class: 'session-main', local: true do |f| %>
+<div class="flash_error">
+<%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+  <%- end -%>  
+  </div>
   
-    <br />
+    
     <div class="session_mail">
      
       私は 電子メール（めーる）<%= f.email_field :email, autofocus: true, autocomplete: "email" %>を書きます。

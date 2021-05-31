@@ -8,17 +8,8 @@
   justify-content: center;
   align-items: center;
 }
-.flash {
-  width: 1025px;
-  display: flex;
-  
-  justify-content: center;
-  
-  margin: 0 auto;
-  margin-bottom: 15px;
-  
-}
-.session_top, .flash {
+
+.session_top {
   line-height: 2.2;
 	font-family: 'Noto Sans JP', sans-serif;
  font-weight: 800;
@@ -47,8 +38,18 @@
   font-size: 18px;
   font-family: 'M PLUS 1p', sans-serif;
   
-
 }
+.flash_error {
+  font-size: 1.3vw;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+  line-height: 1.6;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 15px;
+}
+
+
 .session_btn {
   margin-top: 15px;
   margin-left: 468px;
