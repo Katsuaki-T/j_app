@@ -1,6 +1,7 @@
 <%= render "shared/header" %>
 <div class="registration_top">
-<div class="registration_top_sentence" >新しく「やさしいHP」へ私は入ります</div>
+<div class="registration_top_sentence">
+<ruby>新<rt>あたら</rt></ruby>しく「やさしいHP」へ <ruby>私<rt>わたし</rt></ruby>は <ruby>入<rt>はい</rt></ruby>ります</div>
 </div>
 
 
@@ -16,18 +17,19 @@
   <br>
   <div class="field">
       
-      私の <span style="font-weight:800;">名前</span>は<%= f.text_field :name, autofocus: true, autocomplete: "name", :size => "20*30" %>です。
+      <ruby>私<rt>わたし</rt></ruby>の <span style="font-weight:800;"><ruby>名前<rt>なまえ</rt></ruby></span>は<%= f.text_field :name, autofocus: true, autocomplete: "name", :size => "20*30" %>です。
     </div>
     <br>
   <div class="field">
-  私の<span style="font-weight:800;">国</span>は<%= f.text_field :birth_country, autofocus: true, autocomplete: "birth_country" %>で、
-  今は<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"registration_select-box", id:"item-prefecture"}) %>
-  に <span style="font-weight:800;">住んで</span>います。
+  <ruby>私<rt>わたし</rt></ruby>の<span style="font-weight:800;"><ruby>国<rt>くに</rt></ruby></span>は<%= f.text_field :birth_country, autofocus: true, autocomplete: "birth_country" %>で、
+  <ruby>今<rt>いま</rt></ruby>は<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"registration_select-box", id:"item-prefecture"}) %>
+  に <span style="font-weight:800;"><ruby>住<rt>す</rt></ruby>んで</span>います。
     </div >
   <br>
       <div class="field">
-      私は「やさしいHP」へ  入りますから <br>
-  最初に、電子メール（めーる）<%= f.email_field :email, autofocus: true, autocomplete: "email" %>を書きます。
+      <ruby>私<rt>わたし</rt></ruby>は「やさしいHP」へ  <ruby>入<rt>はい</rt></ruby>りますから <br>
+  <ruby>初<rt>はじ</rt></ruby>めに、<span style="font-weight:800;"><ruby>電子<rt>でんし</rt></ruby><ruby>メール<rt>めーる</rt></ruby></span>
+  <%= f.email_field :email, autofocus: true, autocomplete: "email" %>を<ruby>書<rt>か</rt></ruby>きます。
       </div>
       
     
@@ -40,18 +42,18 @@
       
       <% @minimum_password_length %>
       
-      次に、<span style="font-weight:800;">暗証番号</span><%= f.password_field :password, autocomplete: "new-password" %>を書きます。
+      <ruby>次<rt>つぎ</rt></ruby>に、<span style="font-weight:800;"><ruby>暗証番号<rt>あんしょうばんごう</rt></ruby></span><%= f.password_field :password, autocomplete: "new-password" %>を<ruby>書<rt>か</rt></ruby>きます。
     </div>
     <br>
     <div class="field">
       
-      間違えないように、もう一度、<span style="font-weight:800;">暗証番号</span><%= f.password_field :password_confirmation, autocomplete: "new-password" %>を書きます。
+      <ruby>間違<rt>まちが</rt></ruby>えないように、もう<ruby>一度<rt>いちど</rt></ruby>、<span style="font-weight:800;"><ruby>暗証番号<rt>あんしょうばんごう</rt></ruby></span><%= f.password_field :password_confirmation, autocomplete: "new-password" %>を<ruby>書<rt>か</rt></ruby>きます。
     </div>
   <% end %>
 
   <br>
   <div class="field">
-      私は<span style="font-weight:900;">Facebook</span>を持っているので、そのURLを書いてもいいです。
+      <ruby>私<rt>わたし</rt></ruby>は<span style="font-weight:900;">Facebook</span>を<ruby>持<rt>も</rt></ruby>っているので、そのURLを<ruby>書<rt>か</rt></ruby>いてもいいです。
   <br>
   
       <%= f.text_field :identity, autofocus: true, autocomplete: "identity" , :size => "29*30",class: "identity_field"%>
