@@ -31,12 +31,14 @@
  <% if user_signed_in? %>
   <%if current_user.id == @topic.user_id %>
   <div class="show_under">
-   <div class="show_sentence">私(わたし)は 文章(ぶんしょう)を 書(か)き直(なお)します</div>
+   <div class="show_sentence">
+   <ruby>私<rt>わたし</rt></ruby>は <ruby>文章<rt>ぶんしょう</rt></ruby>を <ruby>書<rt>か</rt></ruby>き<ruby>直<rt>なお</rt></ruby>します</div>
     <%= link_to image_tag("edit.png", method: :get, class: "edit-btn"), edit_topic_path(@topic.id) %>  
   
     <div class="or-text">もしくは</div>
     <br>
-   <div class="show_sentence"> 私(わたし)は 文章(ぶんしょう)を 消(け)します</div>
+   <div class="show_sentence">
+   <ruby>私<rt>わたし</rt></ruby>は <ruby>文章<rt>ぶんしょう</rt></ruby>を <ruby>消<rt>け</rt></ruby>します</div>
     <div><%= link_to image_tag("delete.png"), topic_path, method: :delete, class:"delete-btn" ,data: { confirm: 'あなたは 本当(ほんとう)に この文章(ぶんしょう)を 消(け)しますか？' } %></div>
 
 
