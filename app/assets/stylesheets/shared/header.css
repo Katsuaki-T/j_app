@@ -40,4 +40,11 @@ header > .container{
   font-size: 17px;
   font-weight: bold;
   margin-right: 80px;
+  vertical-align: middle;
+
+}
+.run {
+  width: 30px;
+  height: 28px;
+  vertical-align: sub;
 }
