@@ -1,6 +1,6 @@
 .container {
   width: 1025px;
-  padding: 0 40px;
+  padding: 0 15px;
   margin: 0 auto;
   background-color: #FFFFAA;
   border-radius: 0.4em;
@@ -14,8 +14,13 @@ header > .container{
   vertical-align: bottom;
 }
 .header_nav {
-  margin-left: auto;
+margin-left: 370px;
 }
+.top_in_header {
+  margin-left: 100px;
+}
+
+
  .header_list {
   font-size: 15px;
   font-weight: bold;

@@ -2,12 +2,13 @@
 <header>
 
 <div class="container">
+
   <div class="header_logo">
     <%= link_to image_tag("logo.png"), root_path , class:"header_image_logo" %>
   </div>
 
   <div class="header_nav">
-    <ul >
+    <ul class='top_in_header'>
     <% if user_signed_in? %>
 
     <li><%= link_to current_user.name ,"#",  class: "header_name" %> <span style="font-weight:700;">さん</span></li>
@@ -20,11 +21,13 @@
     <img src="assets/run.png" alt="NEWS" class="run">
     <% end %>
     </li>
+    </ul>
     
     </span>
     </li> 
 
     <% else %>
+    <ul class='top_out_header'>
       <span style="font-family: Comic Sans MS;">
 
       <li class="header_list" id="hl_left"><%= link_to image_tag("login.png"), new_user_registration_path %>
