@@ -20,16 +20,13 @@
     </ul>   
   </div>
 
-
- 
-
-<div class="show_description_main">
+ <div class="show_description_main">
     <div class="show_description_wrapper">
         <div class="show_description"><%= @topic.description %></div>
     </div>
-</div>
+ </div>
 
-<br>
+ <br>
 
  <% if user_signed_in? %>
   <%if current_user.id == @topic.user_id %>
@@ -44,9 +41,11 @@
 
 
 
- </div>
-  <% end %>
- <% end %>
+  </div>
+   <% end %>
+    <% end %>
+  </div>
+  
 </div>
 <%= render "comments/new" %>
 
