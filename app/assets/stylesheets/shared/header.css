@@ -1,12 +1,12 @@
 .container {
   width: 1025px;
-  padding: 0 40px;
+  padding: 0 15px;
   margin: 0 auto;
   background-color: #FFFFAA;
   border-radius: 0.4em;
 }
 header > .container{
-  height:88px;
+  height:84px;
   display: flex;
   align-items: center;
 }
@@ -14,10 +14,15 @@ header > .container{
   vertical-align: bottom;
 }
 .header_nav {
-  margin-left: auto;
+margin-left: 370px;
 }
+.top_in_header {
+  margin-left: 100px;
+}
+
+
  .header_list {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -40,4 +45,11 @@ header > .container{
   font-size: 17px;
   font-weight: bold;
   margin-right: 80px;
+  vertical-align: middle;
+
+}
+.run {
+  width: 30px;
+  height: 28px;
+  vertical-align: sub;
 }
