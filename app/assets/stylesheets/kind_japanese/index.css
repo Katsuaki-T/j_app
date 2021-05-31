@@ -28,7 +28,7 @@
 }
 
 .cp_qa *, .cp_qa *:after, .cp_qa *:before {
-	font-family: 'FontAwesome', sans-serif;
+	font-family: 'Noto Sans JP', sans-serif;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
@@ -96,6 +96,10 @@
 	padding: 0.2em 0.55em;
 	content: '!';
 	background: #0097a7;
+}
+.url {
+	font-size: small;
+	
 }
 .last_say {
 	width: 400px;
