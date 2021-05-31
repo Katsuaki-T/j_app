@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 <div class="session_top">
-<div class="session_top_sentence" >また「やさしいHP」へ私は入ります</div>
+<div class="session_top_sentence" >また「やさしいHP」へ<ruby>私<rt>わたし</rt></ruby>は <ruby>入<rt>はい</rt></ruby>ります</div>
 </div>
 
 <div class='session_main'>
@@ -20,7 +20,8 @@
     
     <div class="session_mail">
      
-      私は 電子メール（めーる）<%= f.email_field :email, autofocus: true, autocomplete: "email" %>を書きます。
+      <ruby>私<rt>わたし</rt></ruby>は <span style="font-weight:800;"><ruby>電子<rt>でんし</rt></ruby><ruby>メール<rt>めーる</rt></ruby></span>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>を<ruby>書<rt>か</rt></ruby>きます。
       </div>
   
 
@@ -29,7 +30,7 @@
       
       <% @minimum_password_length %>
       
-      次に、<span style="font-weight:800;">暗証番号</span><%= f.password_field :password, autocomplete: "new-password" %>を書きます。
+      <ruby>次<rt>つぎ</rt>に、<span style="font-weight:800;"><ruby>暗証番号<rt>あんしょうばんごう</rt></ruby></span><%= f.password_field :password, autocomplete: "new-password" %>を<ruby>書<rt>か</rt></ruby>きます。
     </div>
   
 
