@@ -4,7 +4,7 @@
   
   
   justify-content: center;
-  padding: 0 40px;
+  padding: 0 60px;
   margin: 0 auto;
   text-align: center;
   
@@ -18,17 +18,19 @@
 }
 
 #comment_text {
-  width: 500px;
+  width: 580px;
   height: 100px;
   margin-bottom: 10px;
 
 }
-
 .comment_image {
  margin-top: 10px;
  margin-bottom: 20px;
 }  
-.comment_time {
-  margin-top: 6px;
-  margin-bottom: 20px;
+.comment_contain {
+  margin-bottom: 15px;
+  width: 680px;
+}
+p {
+  white-space: pre-wrap;
 }
