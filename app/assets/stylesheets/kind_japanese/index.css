@@ -24,6 +24,7 @@
 .q_a {
   width: 1025px;
   margin: 0 auto;
+	letter-spacing: 0.2em;
 }
 
 .cp_qa *, .cp_qa *:after, .cp_qa *:before {
