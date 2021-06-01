@@ -67,9 +67,10 @@
 
 .search_right_wrapper {
   width: 530px;
-  height: 180px;
+  
   margin-bottom: 30px;
   margin-left: 10px;
+  letter-spacing: 0.1em;
 }
 .search_right_wrapper {
   position: relative;
