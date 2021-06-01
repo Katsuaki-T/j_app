@@ -111,7 +111,9 @@
 .card_name {
   font-size:18ppx;
   margin-top: -10px;
-  
+}
+.card_name span {
+  border-bottom: 1.8px rgba(0, 0, 0, 0.18) solid;
 }
 
 .topic_card_sentence {
@@ -121,25 +123,38 @@
   color: maroon;
   font-weight: bold;
 }
+
 .card_birth {
   margin-left: 40px;
 
 }
+.card_birth span{
+  border-bottom: 1.5px rgba(0, 0, 0, 0.18) dashed;
+}
 .card_pref {
   margin-left: 40px;
 }
+.card_pref span{
+  border-bottom: 1.5px rgba(0, 0, 0, 0.18) dashed;
+}
 .card_identity {
-  margin-left: 40px;
-  
+  margin-left: 40px; 
+}
+.card_identity span{
+  border-bottom: 1.5px rgba(0, 0, 0, 0.18) dashed;
 }
 .card_identity_content {
   margin-left: 40px;
-  
+}
+.card_identity_content span {
+  border-bottom: 1.5px rgba(0, 0, 0, 0.18) solid;
 }
 .card_updated_time {
-  
   float: right;
   font-size: 13px;
+}
+.card_updated_time span {
+  border-bottom: 1.8px rgba(0, 0, 0, 0.18) solid;
 }
 
 
