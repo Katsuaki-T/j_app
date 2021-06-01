@@ -49,20 +49,16 @@
   font-size:17px;
   margin-top: -10px;
 }
-
-.card_sentence {
-  font-size:17px;
-  margin-left: 20px;
+.card_birth_search span {
+  border-bottom: 1.5px rgba(0, 0, 0, 0.18) dashed;
+}
+.card_pref_search span {
+  border-bottom: 1.5px rgba(0, 0, 0, 0.18) dashed;
 }
 
 
 
-.card_identity {
-  margin-left: 20px;
-}
-.card_identity_content {
-  margin-left: 40px;
-}
+
 .card_updated_time {
   
   float: right;

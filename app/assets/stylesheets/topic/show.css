@@ -29,10 +29,15 @@
 
 .card_birth_show {
   margin-left: 80px;
-
+}
+.card_birth_show span{
+  border-bottom: 1.5px rgba(0, 0, 0, 0.18) dashed;
 }
 .card_pref_show {
   margin-left: 80px;
+}
+.card_pref_show span{
+  border-bottom: 1.5px rgba(0, 0, 0, 0.18) dashed;
 }
 
 .show_description_main {
