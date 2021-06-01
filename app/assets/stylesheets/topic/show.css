@@ -47,7 +47,7 @@
 
 .show_description_wrapper {
   width: 560px;
-  height: 180px;
+ 
   
 }
 .show_description_wrapper {
@@ -71,7 +71,7 @@
 }
 
 .show_description {
-  
+  letter-spacing: 0.1em;
 }
 
 .show_under {
