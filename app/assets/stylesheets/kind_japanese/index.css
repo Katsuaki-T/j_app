@@ -110,3 +110,6 @@
 	font-family: 'FontAwesome', sans-serif;
 	font-weight: bold;
 }
+.last_say:hover {
+  background: rgb(59, 237, 178);
+}
