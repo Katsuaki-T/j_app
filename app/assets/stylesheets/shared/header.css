@@ -13,6 +13,9 @@ header > .container{
 .header_logo {
   vertical-align: bottom;
 }
+.header_logo:hover {
+  background: #FFFF66;
+}
 .header_nav {
 margin-left: 370px;
 }

@@ -14,6 +14,9 @@
   display:flex;
   justify-content: center;
 }
+.footer_image_logo:hover {
+  background: #FFFF66;
+}
 .copy_right {
   color: #ffffff;
   font-size: 12px;
