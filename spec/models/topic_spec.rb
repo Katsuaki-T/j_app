@@ -16,13 +16,13 @@ RSpec.describe Topic, type: :model do
       it 'sentence_idが最初の状態だと保存できない' do
         @topic.sentence_id = 1
         @topic.valid?
-        expect(@topic.errors.full_messages).to include("文章（ぶんしょう）を選択してください")
+        expect(@topic.errors.full_messages).to include("文章(ぶんしょう)を 選(えら)びましょう")
       end
 
       it 'descriptionがないと保存できない' do
         @topic.description = ''
         @topic.valid?
-        expect(@topic.errors.full_messages).to include("説明（せつめい）を入力してください")
+        expect(@topic.errors.full_messages).to include("説明文(せつめいぶん)を 書(か)きましょう")
       end
 
       it 'userが紐付いていないと保存できないこと' do

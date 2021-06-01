@@ -29,40 +29,40 @@ RSpec.describe User, type: :model do
       it 'nameが空では登録できないこと' do
         @user.name = ""
         @user.valid?
-        expect(@user.errors.full_messages).to include("名前（なまえ）を入力してください")
+        expect(@user.errors.full_messages).to include("名前(なまえ)を 書(か)きましょう")
       end
   
       it 'emailが空では登録できないこと' do
         @user.email = ""
         @user.valid?
-        expect(@user.errors.full_messages).to include("Eメールを入力してください")
+        expect(@user.errors.full_messages).to include("電子(でんし)メール(めーる)を 書(か)きましょう")
       end
   
       it 'passwordが空では登録できないこと' do
         @user.password = ""
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードを入力してください")
+        expect(@user.errors.full_messages).to include("暗証番号(あんしょう ばんごう)を 書(か)きましょう")
       end
      
       it 'passwordが5文字以下であれば登録できないこと' do
         @user.password = "12345"
         @user.password_confirmation ="12345"
         @user.valid?
-        expect(@user.errors.full_messages). to include("パスワードは6文字以上で入力してください")
+        expect(@user.errors.full_messages). to include("暗証番号(あんしょう ばんごう)は 6字以上(じ いじょう)にしましょう")
       end
   
       it 'passwordとpassword_confirmationが不一致では登録できないこと' do
         @user.password = "123456"
         @user.password_confirmation = "1234567"
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
+        expect(@user.errors.full_messages).to include("二番目(に ばんめ)の暗証番号(あんしょう ばんごう)と 初(はじ)めの暗証番号(あんしょう ばんごう)が 同(おな)じではないです")
       end
   
       it '重複したemailが存在する場合登録できないこと' do
         @user.save
         another_user = FactoryBot.build(:user, email: @user.email)
         another_user.valid?
-        expect(another_user.errors.full_messages).to include('Eメールはすでに存在します')
+        expect(another_user.errors.full_messages).to include('電子(でんし)メール(めーる)を 確認(かくにん)しましょう 同(おな)じメール(めーる)は使(つか)えません')
       end
     end
   end

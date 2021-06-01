@@ -16,6 +16,10 @@ class User < ApplicationRecord
     validates :password
   end
 
+  validates :email, uniqueness:  { message: "を 確認(かくにん)しましょう 同(おな)じメール(めーる)は使(つか)えません" }
+  validates :password_confirmation, presence: { message: "も 書(か)きましょう" }
+  validates :password, confirmation: { message: "と 初(はじ)めの暗証番号(あんしょう ばんごう)が 同(おな)じではないです" }
+  validates :password, length: { minimum: 6 , message: "は 6字以上(じ いじょう)にしましょう"} 
   
   
 
