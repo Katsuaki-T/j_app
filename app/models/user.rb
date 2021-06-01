@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :name
   validates :birth_country
   end
-  validates :prefecture_id, numericality: { other_than: 1, message: "を選択してください" }
+  validates :prefecture_id, numericality: { other_than: 1, message: "を 選(えら)びましょう" }
 
   
   has_many :topics
