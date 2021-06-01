@@ -12,20 +12,20 @@
     <br>
       <li class="card">
  
-     <li class="card_name"> <%= result.user.id %> <%= result.user.name %></li>
+     <li class="card_name"> <span><%= result.user.id %> <%= result.user.name %></span></li>
       <br>
-     <li class="card_birth_search"> 私(わたし)は<br><%= result.user.birth_country %><br>出身(しゅっしん)です</li>
+     <li class="card_birth_search"> <span>私(わたし)は<br><%= result.user.birth_country %><br>出身(しゅっしん)です</span></li>
       <br>
-      <li class="card_pref_search">私(わたし)は<br><%= result.user.prefecture.name %>に<br> 住(す)んでいます </li>
+      <li class="card_pref_search"><span>私(わたし)は<br><%= result.user.prefecture.name %>に<br> 住(す)んでいます</span> </li>
       
-    <li class="card_updated_time"><%= result.user.updated_at.strftime('%Y/%m/%d')  %></li>
+    <li class="card_updated_time"><span><%= result.user.updated_at.strftime('%Y/%m/%d')  %></span></li>
 
     </li>
      
     </div>
 
    <div class="search_right_wrapper">
-      <div class="search_description"><%= result.description %>
+      <div class="search_description"><%= simple_format(result.description) %>
       </div>
   </div>
 

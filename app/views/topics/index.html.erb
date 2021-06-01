@@ -45,22 +45,22 @@
     <div class="card_wrapper">
     <br>
       <li class="card">
-       <li class="card_name"><%= topic.user.id %> <%= topic.user.name %> </li>
+       <li class="card_name"><span><%= topic.user.id %> <%= topic.user.name %></span> </li>
        <br>
           <li class="topic_card_sentence"><%= topic.sentence.name %></li>
    <br>
-          <li class="card_birth">私(わたし)は  <%= topic.user.birth_country %> 出身(しゅっしん)です </li>
+          <li class="card_birth"><span>私(わたし)は  <%= topic.user.birth_country %> 出身(しゅっしん)です</span> </li>
       
-          <li class="card_pref">私(わたし)は <%= topic.user.prefecture.name %>に 住(す)んでいます </li>
+          <li class="card_pref"><span>私(わたし)は <%= topic.user.prefecture.name %>に 住(す)んでいます</span> </li>
       <br>
       <% if  topic.user.identity.present? %>
-        <li class="card_identity"> 私(わたし)は Facebookを 使(つか)います<li>
+        <li class="card_identity"> <span>私(わたし)は Facebookを 使(つか)います</span><li>
       
          
-          <li class="card_identity_content"> <%= topic.user.identity %> </li>
+          <li class="card_identity_content"> <span><%= topic.user.identity %></span> </li>
        <% end %>
       <br> 
-          <li class="card_updated_time"><%= topic.updated_at.strftime('%Y/%m/%d')  %></li>
+          <li class="card_updated_time"><span><%= topic.updated_at.strftime('%Y/%m/%d') %></span></li>
         
      </li>
      

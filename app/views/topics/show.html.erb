@@ -7,13 +7,13 @@
       <br>
        <li class="card">
 
-            <li class="card_name"> <%= @topic.user.id %> <%= @topic.user.name %></li>
+            <li class="card_name"> <span><%= @topic.user.id %> <%= @topic.user.name %></span></li>
               <br>
-           <li class="card_birth_show"> 私(わたし)は<br><%= @topic.user.birth_country %><br>出身(しゅっしん)です</li>
+           <li class="card_birth_show"> <span>私(わたし)は<br><%= @topic.user.birth_country %><br>出身(しゅっしん)です</span></li>
             <br>
-           <li class="card_pref_show">私(わたし)は<br><%= @topic.user.prefecture.name %>に<br> 住(す)んでいます </li>
+           <li class="card_pref_show"><span>私(わたし)は<br><%= @topic.user.prefecture.name %>に<br> 住(す)んでいます</span> </li>
             
-           <li class="card_updated_time"><%= @topic.user.updated_at.strftime('%Y/%m/%d')  %></li>
+           <li class="card_updated_time"><span><%= @topic.user.updated_at.strftime('%Y/%m/%d')  %></span></li>
             
         </li>
       </div>
@@ -22,7 +22,8 @@
 
  <div class="show_description_main">
     <div class="show_description_wrapper">
-        <div class="show_description"><%= @topic.description %></div>
+        <div class="show_description"><%=simple_format(@topic.description)%></div>
+       
     </div>
  </div>
 
