@@ -6,7 +6,13 @@
  color: #FF4500;
  font-size: 27px;
  letter-spacing: 0.2em;
+ animation: blinkAnime 1s infinite alternate;
 }
+@keyframes blinkAnime{
+  0% { color: #000000 }
+100% { color: #FF4500 }
+}
+
 .index_kind_japanese:hover {
   background: #FADAD9;
 }
