@@ -77,3 +77,55 @@ RSpec.describe 'topic詳細', type: :system do
     expect(page).to have_no_selector 'form'
   end
 end
+
+RSpec.describe 'topic削除', type: :system do
+  before do
+    @topic1 = FactoryBot.create(:topic)
+    @topic2 = FactoryBot.create(:topic)
+  end
+  context 'ツイート削除ができるとき' do
+    it 'ログインしたユーザーは自らが投稿したツイートの削除ができる' do
+      # ツイート1を投稿したユーザーでログインする
+      visit new_user_session_path
+      fill_in 'user[email]', with: @topic1.user.email
+      fill_in 'user[password]', with: @topic1.user.password
+      find('button[name="button"]').click
+      expect(current_path).to eq(root_path)
+      # 詳細ページに遷移する
+      visit topic_path(@topic1)
+      # ツイート1に「削除」へのボタンがあることを確認する
+      expect(page).to have_content('消')
+      # 投稿を削除する（confirmダイアログでOKを選択する）
+      page.accept_confirm do
+        find("#delete-btn").click
+      end
+      # 削除完了画面に遷移したことを確認する
+      expect(current_path).to eq(topic_path(@topic1))
+      # 「削除が完了しました」の文字があることを確認する
+      expect(page).to have_content('消')
+      
+    end
+  end
+  context 'ツイート削除ができないとき' do
+    it 'ログインしたユーザーは自分以外が投稿したツイートの削除ができない' do
+      # topic1を投稿したユーザーでログインする
+      visit new_user_session_path
+      fill_in 'user[email]', with: @topic1.user.email
+      fill_in 'user[password]', with: @topic1.user.password
+      find('button[name="button"]').click
+      expect(current_path).to eq(root_path)
+      # topic2の詳細ページに遷移する
+      visit topic_path(@topic2)
+      # topic2に削除のボタンがないことを確認する
+      expect(page).to have_no_content('消')
+
+    end
+    it 'ログインしていないとtopicの削除ボタンがない' do
+      # トップページに移動する
+      visit root_path
+      # topicに削除ボタンがないことを確認する
+      expect(page).to have_no_content('消')
+     
+    end
+  end
+end
