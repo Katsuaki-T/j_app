@@ -8,14 +8,9 @@ RSpec.describe 'topic投稿', type: :system do
   context 'topic投稿ができるとき'do
   it 'ログインしたユーザーは新規投稿できる' do
     # ログインする
-    visit new_user_session_path
-  
-      fill_in 'user[email]', with: @user.email
-      fill_in 'user[password]', with: @user.password
-      
-      find('button[name="button"]').click
-      
-      expect(current_path).to eq(root_path)
+
+    sign_in(@user)
+
     # 新規投稿ページへのボタンがあることを確認する
     # 投稿ページに移動する
     # フォームに情報を入力する
