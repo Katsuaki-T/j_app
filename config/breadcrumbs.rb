@@ -13,7 +13,7 @@ crumb :topiced do |topic|
 end
 
 crumb :topic do |topic|
-  link "文章(ぶんしょう)を説明(せつめい)します、話(はな)します", topic_path(topic.id)
+  link "文章(ぶんしょう)を説明(せつめい)します", topic_path(topic.id)
   parent :root
 end
 
