@@ -5,6 +5,16 @@
   background-color: #FFFFAA;
   border-radius: 0.4em;
 }
+
+.breadcrumbs {
+  position: absolute;
+  top: 88px;
+  left: 120px;
+  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
 header > .container{
   height:84px;
   display: flex;

@@ -72,3 +72,5 @@ gem 'omniauth', '~>1.9.1'
 gem 'ransack'
 
 gem 'rails-i18n'
+
+gem "gretel"
