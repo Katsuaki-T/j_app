@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'topic投稿', type: :system do
   before do
     @user = FactoryBot.create(:user)
-    @topic = Faker::Lorem.sentence
+    @topic_text = Faker::Lorem.sentence
    
   end
   context 'topic投稿ができるとき'do
@@ -18,7 +18,7 @@ RSpec.describe 'topic投稿', type: :system do
     visit new_topic_path
     # フォームに情報を入力する
     select '私(わたし)は 日本語(にほんご)を 勉強(べんきょう)します', from: 'topic[sentence_id]'
-    fill_in 'topic[description]', with: @topic
+    fill_in 'topic[description]', with: @topic_text
     # 送信するとTweetモデルのカウントが1上がることを確認する
     expect{
       find('button[name="button"]').click
@@ -38,4 +38,33 @@ end
       expect(current_path).to eq (new_user_session_path)
     end
   end
+end
+
+
+RSpec.describe 'topic詳細', type: :system do
+  before do
+    @topic = FactoryBot.create(:topic)
+  end
+  it 'ログインしたユーザーはツイート詳細ページに遷移してコメント投稿欄が表示される' do
+    # ログインする
+    visit new_user_session_path
+    fill_in 'user[email]', with: @topic.user.email
+    fill_in 'user[password]', with: @topic.user.password
+    click_on("button")
+    expect(current_path).to eq root_path
+   
+    # 詳細ページに遷移する
+    visit topic_path(@topic)
+    
+    # 詳細ページにdescriptionの内容が含まれている
+   
+     expect(page).to have_content("#{@topic.description}")
+    # 編集と削除へのボタンが存在する事
+    expect(page).to have_content('直')
+    expect(page).to have_content('消')
+     # コメント用のフォームが存在する
+     expect(page).to have_selector 'form'
+  end
+
+  
 end
