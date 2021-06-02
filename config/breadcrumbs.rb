@@ -22,6 +22,11 @@ crumb :edit_topic do |topic|
   parent :topic ,topic
 end
 
+crumb :topic do
+  link "商品出品", new_topic_path
+  parent :root
+end
+
 
 
 
