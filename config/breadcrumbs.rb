@@ -7,7 +7,10 @@ crumb :kind_japanese do
   parent :root
 end
 
-
+crumb :topic do |topic|
+  link "商品検索", search_topics_path
+  parent :root
+end
 
 
 
