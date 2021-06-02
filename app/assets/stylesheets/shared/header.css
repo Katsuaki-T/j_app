@@ -12,20 +12,34 @@ header > .container{
 }
 .header_logo {
   vertical-align: bottom;
+  margin-bottom: 10px;
+  
 }
 .header_logo:hover {
   background: #FFFF66;
 }
 .header_nav {
-margin-left: 370px;
+margin-left: 450px;
+
 }
 .top_in_header {
   margin-left: 100px;
+
+}
+.run_out_font {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 600;
 }
 
+.logout_logo {
+  margin-bottom: 10px;
+  
+  top: 10px;
+ 
+}
 
  .header_list {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -42,7 +56,7 @@ margin-left: 370px;
   font-size: 17px;
   font-weight: bold;
   cursor: none;
-  margin-left: 40px;
+ 
 }
 .logout {
   font-size: 17px;
@@ -54,5 +68,9 @@ margin-left: 370px;
 .run {
   width: 30px;
   height: 28px;
+  vertical-align: sub;
+ 
+}
+.in {
   vertical-align: sub;
 }
