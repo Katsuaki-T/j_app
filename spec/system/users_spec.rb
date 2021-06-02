@@ -1,9 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :system do
-  before do
-    driven_by(:rack_test)
-  end
+RSpec.describe "ユーザー新規登録", type: :system do
 
-  pending "add some scenarios (or delete) #{__FILE__}"
+    before do
+      @user = FactoryBot.build(:user)
+    end
+  
+
+  
 end
