@@ -12,6 +12,11 @@ crumb :topic do |topic|
   parent :root
 end
 
+crumb :topic do |topic|
+  link "商品詳細", topic_path(topic.id)
+  parent :root
+end
+
 
 
 
