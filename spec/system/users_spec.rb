@@ -57,5 +57,24 @@ RSpec.describe 'ログイン', type: :system do
   before do
     @user = FactoryBot.create(:user)
   end
-  
+
+  context 'ログインができるとき' do
+    it '保存されているユーザーの情報と合致すればログインができる' do
+      # トップページに移動する
+      visit root_path
+      # トップページにログインページに遷移するボタンがあることを確認する
+      expect(page).to have_content('また')
+      # ログインページに遷移する
+      visit new_user_session_path
+      # 正しいユーザー情報を入力する
+      fill_in 'user[email]', with: @user.email
+      fill_in 'user[password]', with: @user.password
+      # ログインボタンを押す
+      find('button[name="button"]').click
+      # トップページに遷移する
+      visit root_path
+      # トップページにユーザーの名前が表示されることを確認する
+      expect(page).to have_content(@user.name)
+    end
+  end
 end
