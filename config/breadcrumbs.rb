@@ -1,29 +1,29 @@
 crumb :root do
-  link "Home", root_path
+  link "入(い)り口(ぐち)", root_path
 end
 
 crumb :kind_japanese do
-  link "kind_japanese", kind_japanese_index_path
+  link "5つのわかりません", kind_japanese_index_path
+  parent :root
+end
+
+crumb :topiced do |topic|
+  link "文章(ぶんしょう)を探(さが)します", search_topics_path
   parent :root
 end
 
 crumb :topic do |topic|
-  link "商品検索", search_topics_path
-  parent :root
-end
-
-crumb :topic do |topic|
-  link "商品詳細", topic_path(topic.id)
+  link "文章(ぶんしょう)を説明(せつめい)します、話(はな)します", topic_path(topic.id)
   parent :root
 end
 
 crumb :edit_topic do |topic|
-  link "商品編集", edit_topic_path
+  link "書(か)き直(なお)します", edit_topic_path
   parent :topic ,topic
 end
 
-crumb :topic do
-  link "商品出品", new_topic_path
+crumb :topics do
+  link "文章(ぶんしょう)を送(おく)ります", new_topic_path
   parent :root
 end
 
