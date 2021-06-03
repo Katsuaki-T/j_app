@@ -130,36 +130,4 @@ RSpec.describe 'topic削除', type: :system do
   end
 end
 
-RSpec.describe 'topic編集', type: :system do
-  before do
-    @topic1 = FactoryBot.create(:topic)
-    @topic2 = FactoryBot.create(:topic)
-  end
-context 'ツイート編集ができるとき' do
-    it 'ログインしたユーザーは自分が投稿したツイートの編集ができる' do
-      # topic1を投稿したユーザーでログインする
-      visit new_user_session_path
-      fill_in 'user[email]', with: @topic1.user.email
-      fill_in 'user[password]', with: @topic1.user.password
-      find('button[name="button"]').click
-      expect(current_path).to eq(root_path)
-      # 詳細ページに遷移する
-      visit topic_path(@topic1)
-      # ツイート1に「編集」へのボタンがあることを確認する
-      expect(page).to have_content('直')
 
-      # すでに投稿済みの内容がフォームに入っていることを確認する
-      expect(
-        find('#topic_sentence_id').value
-      ).to eq "#{@topic1.sentence_id}"
-      # 投稿内容を編集する
-
-      # 編集してもTweetモデルのカウントは変わらないことを確認する
-      # 編集完了画面に遷移したことを確認する
-      # 「更新が完了しました」の文字があることを確認する
-      # トップページに遷移する
-      # トップページには先ほど変更した内容のツイートが存在することを確認する（画像）
-      # トップページには先ほど変更した内容のツイートが存在することを確認する（テキスト）
-  end
-end
-end
