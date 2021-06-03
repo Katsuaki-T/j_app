@@ -1,5 +1,11 @@
 require 'rails_helper'
 
+def basic_pass(path)
+  username = ENV["BASIC_AUTH_USER_2"]
+  password = ENV["BASIC_AUTH_PASSWORD_2"]
+  visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}"
+end
+
 RSpec.describe 'topic投稿', type: :system do
   before do
     @user = FactoryBot.create(:user)
