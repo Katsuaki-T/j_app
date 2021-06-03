@@ -1,6 +1,7 @@
 module SignInSupport
   def sign_in(user)
-
+    basic_pass root_path
+    
     visit new_user_session_path
   
     fill_in 'user[email]', with: @user.email

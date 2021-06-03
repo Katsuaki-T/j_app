@@ -15,8 +15,8 @@ RSpec.describe "Comments", type: :system do
 
   it 'ログインしたユーザーはツイート詳細ページでコメント投稿できる' do
     # ログインする
-    basic_pass root_path
     
+
     sign_in(@user)
     # topic詳細ページに遷移する
     visit topic_path(@topic)
