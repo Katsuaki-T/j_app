@@ -22,7 +22,7 @@
     <br>
   <div class="field">
   <ruby>私<rt>わたし</rt></ruby>の<span style="font-weight:800;"><ruby>国<rt>くに</rt></ruby></span>は<%= f.text_field :birth_country, autofocus: true, autocomplete: "birth_country" %>で、
-  <ruby>今<rt>いま</rt></ruby>は<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"registration_select-box", id:"item-prefecture"}) %>
+  <ruby>今<rt>いま</rt></ruby>は<%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"registration_select-box", id:"user-prefecture"}) %>
   に <span style="font-weight:800;"><ruby>住<rt>す</rt></ruby>んで</span>います。
     </div >
   <br>
@@ -65,7 +65,7 @@
 
 </div>
    
-          <div><%= button_tag type: :submit ,class: "registration_btn" do %>
+          <div><%= button_tag type: :submit ,name: :commit ,class: "registration_btn" do %>
           <%= image_tag('explain.png',size: '30x30')  %>
         <% end %>
          </div>

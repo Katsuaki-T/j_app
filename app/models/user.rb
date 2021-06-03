@@ -27,7 +27,7 @@ class User < ApplicationRecord
 
   
   has_many :topics
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_one :sns_credential
 
   extend ActiveHash::Associations::ActiveRecordExtensions
