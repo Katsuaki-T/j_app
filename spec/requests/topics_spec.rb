@@ -14,7 +14,7 @@ describe TopicsController, type: :request do
     
     it 'indexアクションにリクエストするとレスポンスに投稿検索フォームが存在する' do 
       get root_path
-      expect(response.body).to include('探')
+      expect(response.body).to include('選')
     end
   end
 
