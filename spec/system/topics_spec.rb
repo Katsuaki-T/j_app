@@ -30,7 +30,7 @@ RSpec.describe 'topic投稿', type: :system do
   end
 end
   context 'topic投稿ができないとき'do
-    it 'ログインしていないと新規投稿ページに遷移できない' do
+    it 'ログインしていないとログイン画面に移行する事' do
       # トップページに遷移する
       visit root_path
       # 新規投稿ページへ移ろうとするとログイン画面へいく事を確認する
@@ -131,3 +131,28 @@ RSpec.describe 'topic削除', type: :system do
 end
 
 
+RSpec.describe 'topic検索', type: :system do
+  before do
+    @user = FactoryBot.create(:user)
+    @topic = FactoryBot.create(:topic)
+  end
+  it 'ログインしたユーザーはtopic検索画面が表示されdescriptionを表示する事ができる' do
+    # ログインする
+    sign_in(@user)
+   
+    # 検索ページに遷移する
+    visit search_topics_path
+    # 検索ページにdescriptionの内容が含まれている
+     expect(page).to have_content("#{@topic.description}") 
+  end
+  
+    it 'ログインしていないとログイン画面に移行する事' do
+      # トップページに遷移する
+      visit root_path
+      # 新規投稿ページへ移ろうとするとログイン画面へいく事を確認する
+      click_on("search_buttton")
+      expect(current_path).to eq (new_user_session_path)
+    end
+  
+  
+end
