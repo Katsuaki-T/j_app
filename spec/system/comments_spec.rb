@@ -1,5 +1,11 @@
 require 'rails_helper'
 
+def basic_pass(path)
+  username = ENV["BASIC_AUTH_USER_2"]
+  password = ENV["BASIC_AUTH_PASSWORD_2"]
+  visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}"
+end
+
 RSpec.describe "Comments", type: :system do
   before do
     @user = FactoryBot.create(:user)
@@ -9,6 +15,8 @@ RSpec.describe "Comments", type: :system do
 
   it 'ログインしたユーザーはツイート詳細ページでコメント投稿できる' do
     # ログインする
+    basic_pass root_path
+    
     sign_in(@user)
     # topic詳細ページに遷移する
     visit topic_path(@topic)
