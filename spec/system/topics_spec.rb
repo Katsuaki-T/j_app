@@ -19,7 +19,7 @@ RSpec.describe 'topic投稿', type: :system do
     # フォームに情報を入力する
     select '私(わたし)は 日本語(にほんご)を 勉強(べんきょう)します', from: 'topic[sentence_id]'
     fill_in 'topic[description]', with: @topic_text
-    # 送信するとTweetモデルのカウントが1上がることを確認する
+    # 送信するとTopictモデルのカウントが1上がることを確認する
     expect{
       find('button[name="button"]').click
     }.to change { Topic.count }.by(1)
@@ -85,7 +85,7 @@ RSpec.describe 'topic削除', type: :system do
   end
   context 'ツイート削除ができるとき' do
     it 'ログインしたユーザーは自らが投稿したツイートの削除ができる' do
-      # ツイート1を投稿したユーザーでログインする
+      # topic1を投稿したユーザーでログインする
       visit new_user_session_path
       fill_in 'user[email]', with: @topic1.user.email
       fill_in 'user[password]', with: @topic1.user.password
@@ -106,8 +106,8 @@ RSpec.describe 'topic削除', type: :system do
       
     end
   end
-  context 'ツイート削除ができないとき' do
-    it 'ログインしたユーザーは自分以外が投稿したツイートの削除ができない' do
+  context 'topic削除ができないとき' do
+    it 'ログインしたユーザーは自分以外が投稿したtopicの削除ができない' do
       # topic1を投稿したユーザーでログインする
       visit new_user_session_path
       fill_in 'user[email]', with: @topic1.user.email
