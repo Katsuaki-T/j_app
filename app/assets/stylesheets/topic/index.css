@@ -27,7 +27,7 @@
 .flower {
 	
 	height: 550px;
-	background-image:image-url("flower.png");
+	background-image: url(<%= asset_path 'flower.png'%>) }
 	
 	background-size: contain;
   border-radius: 0.4em;
