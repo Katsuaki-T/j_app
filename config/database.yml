@@ -51,5 +51,6 @@ test:
 production:
   <<: *default
   database: j_app_production
-  username: j_app
-  password: <%= ENV['J_APP_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
