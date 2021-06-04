@@ -1,14 +1,13 @@
 class TopicsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_topic, only: [:edit, :show, :update, :destroy]
-  before_action :move_to_index, except: [:index, :show, :new, :create,:search]
+  before_action :move_to_index, except: [:index, :show, :new, :create, :search]
   before_action :search_topic, only: [:index, :search]
 
   def index
     @topics = Topic.includes(:user).order('created_at DESC')
-    
   end
-  
+
   def new
     @topic = Topic.new
   end
@@ -27,11 +26,9 @@ class TopicsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
-    
     if @topic.update(topic_params)
       redirect_to topic_path(@topic.id)
     else
@@ -40,7 +37,6 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-
     @topic.destroy
   end
 
@@ -49,6 +45,7 @@ class TopicsController < ApplicationController
   end
 
   private
+
   def topic_params
     params.require(:topic).permit(:sentence_id, :description).merge(user_id: current_user.id)
   end
@@ -64,6 +61,4 @@ class TopicsController < ApplicationController
   def search_topic
     @p = Topic.ransack(params[:q])  # 検索オブジェクトを生成
   end
-
-
 end
