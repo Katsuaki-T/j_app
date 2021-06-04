@@ -1,16 +1,12 @@
 class CommentsController < ApplicationController
-
   def new
     @comment = Comment.new
     @topic = Topic.find(params[:id])
-    
   end
 
   def create
-     @comment = Comment.new(comment_params)
-    if @comment.save
-      ActionCable.server.broadcast 'comment_channel', content: @comment
-    end
+    @comment = Comment.new(comment_params)
+    ActionCable.server.broadcast 'comment_channel', content: @comment if @comment.save
   end
 
   private
@@ -22,5 +18,4 @@ class CommentsController < ApplicationController
   def topic_params
     params.require(:topic).permit(:sentence_id, :description).merge(user_id: current_user.id)
   end
-
 end
