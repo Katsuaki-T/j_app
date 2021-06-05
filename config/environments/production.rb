@@ -3,8 +3,8 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
 
   ActionCable.server.config.disable_request_forgery_protection = true
-  config.action_cable.url = "wss://j_app.herokuapp.com/cable" 
-  config.action_cable.allowed_request_origins = ['https://j_app.herokuapp.com', 'http://j_app.herokuapp.com']
+  config.action_cable.url = "wss://54.92.62.133/cable" 
+  config.action_cable.allowed_request_origins = ['https://54.92.62.133']
 
   # Settings specified here will take precedence over those in config/application.rb.
 
