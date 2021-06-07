@@ -111,9 +111,13 @@ Ruby on Rails 6.1.3.2
 E-mail ken.tanaka0612@gmail.com
 
 ## 参考文献
-弘前大学人文学部社会言語学研究室 https://web.archive.org/web/20191027180317/http://human.cc.hirosaki-u.ac.jp/kokugo/EJ3mokuji.htm
+弘前大学人文学部社会言語学研究室
 
-文化庁 (https://www.bunka.go.jp/koho_hodo_oshirase/hodohappyo/pdf/92531901_01.pdf 11枚目)
+ <https://web.archive.org/web/20191027180317/http://human.cc.hirosaki-u.ac.jp/kokugo/EJ3mokuji.htm>
+
+文化庁 
+
+<https://www.bunka.go.jp/koho_hodo_oshirase/hodohappyo/pdf/92531901_01.pdf> 11枚目
 
 
 
