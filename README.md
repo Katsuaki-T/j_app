@@ -121,7 +121,8 @@ E-mail ken.tanaka0612@gmail.com
 
 <https://www.bunka.go.jp/koho_hodo_oshirase/hodohappyo/pdf/92531901_01.pdf> 11枚目
 
-
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/941d08ff562cc9c222f62c934d7cf151.png)](https://gyazo.com/941d08ff562cc9c222f62c934d7cf151)
 
 # データベース 設計
 
