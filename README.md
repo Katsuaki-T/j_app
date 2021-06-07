@@ -61,7 +61,7 @@ mail: test@test.com
 [![Image from Gyazo](https://i.gyazo.com/2e5f63b58d930d8f9c8677987433ea93.gif)](https://gyazo.com/2e5f63b58d930d8f9c8677987433ea93)
 ログイン画面についても、同じ仕様になっています。
 
-### 「やさしい日本語にほんご」の ５いつつの わかりません ページ （kind_japanese controller)
+### 「やさしい日本語にほんご」の ５つの わかりません ページ （kind_japanese controller)
 
 [![Image from Gyazo](https://i.gyazo.com/b519b88b5a72f1868ec087a889849085.gif)](https://gyazo.com/b519b88b5a72f1868ec087a889849085)
 
