@@ -8,12 +8,14 @@ URL：<http://54.92.62.133/> PC向けwebアプリケーション
 
 Basic認証 
 
-ID番号: j_app 
+ID番号: j_app
+
 暗証番号: kind_japanese
 
 テスト用アカウント
 
 mail: test@test.com
+
 暗証番号:test123
 
 ## ペルソナ
