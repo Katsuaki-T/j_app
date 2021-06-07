@@ -129,7 +129,7 @@ E-mail ken.tanaka0612@gmail.com
 ## ER図
 [![Image from Gyazo](https://i.gyazo.com/d1f09440bc73db3500fb84545d70dbf4.png)](https://gyazo.com/d1f09440bc73db3500fb84545d70dbf4)
 
-## users table
+## users テーブル
 
 | Column             | Type    | Options                |
 | ------------------ | ------- | ---------------------- |
@@ -147,7 +147,7 @@ E-mail ken.tanaka0612@gmail.com
 - has_one :sns_credential
 
 
-## topics table
+## topics テーブル
 
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
