@@ -42,6 +42,7 @@ mail: test@test.com
 
 ## Demo (実演)
 
+
 ### トップページ（投稿一覧）
 
 [![Image from Gyazo](https://i.gyazo.com/0ed57589912b9b8981d679969d1e9439.gif)](https://gyazo.com/0ed57589912b9b8981d679969d1e9439)
@@ -78,6 +79,42 @@ mail: test@test.com
 
 トップページに固定して置かれている青色の投稿ボタンから基本的には投稿画面に移行します。viewに関してもボタンと統一して青色の画面に変更し気分を一新させる狙いがあります。ここで文章を選択し、それについての説明文を記入できます。選択できる文章は外国人ユーザー向けのの３つと日本語に興味のある日本人向けに「私は日本語を教えます」の文章も加えてあります。この部分は開発者が日本語を教えるためのきっかけにこのアプリを使いたいという強い気持ちです。
 ちなみにここでもエラー文はやさしい日本語で統一しています。
+
+### 詳細画面
+
+[![Image from Gyazo](https://i.gyazo.com/dd51128dac5762d39ad61ea7ca05a603.gif)](https://gyazo.com/dd51128dac5762d39ad61ea7ca05a603)
+
+トップページのポストイットをクリックすると投稿した時の説明文が見れる詳細ページにとびます。ログインしているユーザーはここでコメントのやりとりができます。
+[![Image from Gyazo](https://i.gyazo.com/dab20bd14eb00b41a68e54b41dd0e519.gif)](https://gyazo.com/dab20bd14eb00b41a68e54b41dd0e519)
+
+本人が詳細ページに移行すると編集と削除のわかりやすいアイコンと指示文が現れます。本人も説明文に追記できるようにコメント欄も表示してあります。削除する時には間違ってボタンを押した時に消さないようにワンクッション、消すかどうかの警告が出るようにしています（ここのコメントもやさしい日本語）
+
+### 検索画面
+
+[![Image from Gyazo](https://i.gyazo.com/a9674b4d689b39b7c437f7c5d8bbc2fb.gif)](https://gyazo.com/a9674b4d689b39b7c437f7c5d8bbc2fb)
+
+トップページから指のアイコンを押すと検索ページにとび、連続して自分の気になる文章の説明文を読むことができます。最後にもう気づかれている方もいらっしゃると思いますが、パンくず機能に関してもやさしい日本語で統一しています。全文、やさしい日本語です！！！（rubyタグ設置するの大変）
+
+## 実装したい機能
+facebook登録機能に関して、AWSのデプロイ環境では料金がかかりそうなので実装したいがしていない
+（herokuでは実装済）
+
+
+## Requirement
+Ruby 2.6.5
+
+Ruby on Rails 6.1.3.2
+
+## Author
+作成者  田中 克明(たなか かつあき)
+
+E-mail ken.tanaka0612@gmail.com
+
+## 参考文献
+弘前大学人文学部社会言語学研究室 https://web.archive.org/web/20191027180317/http://human.cc.hirosaki-u.ac.jp/kokugo/EJ3mokuji.htm
+
+文化庁 (https://www.bunka.go.jp/koho_hodo_oshirase/hodohappyo/pdf/92531901_01.pdf 11枚目)
+
 
 
 # Table Design
