@@ -1,20 +1,20 @@
 # やさしいHP
 
 ## アプリケーション概要
-URL：<http://54.92.62.133/> PC向けwebアプリケーション
+・URL：<http://54.92.62.133/> PC向けwebアプリケーション
 
-要件定義 URL: <https://docs.google.com/spreadsheets/d/1PT0Prc3pesKkML98s2cFBdiz8tix_J9Dj2FXkbAd7Kc/edit#gid=0>
+・要件定義 URL: <https://docs.google.com/spreadsheets/d/1JqdnRIAo8ZIBGOAGxeb2HNFvVmstgZ6yXu_UcKnuE3Q/edit#gid=0>
 
 
-Basic認証 
+・Basic認証 
 
 ID番号: j_app
 
-暗証番号: kind_japanese
+暗証番号: kind_japanese>
 
-テスト用アカウント
+・テスト用アカウント
 
-mail: test@test.com
+Mail: test@test.com
 
 暗証番号:test123
 
@@ -34,8 +34,8 @@ mail: test@test.com
 シンプルな投稿アプリです。日本語に興味のある外国人または日本人が、
 その事について投稿できます。
 投稿した内容を検索したり、ログインすれば投稿した内容にコメントすることもできます。
-ただ、全ての日本語がやさしい日本語と呼ばれる
-日本語学習、初級の人のための、より親切で簡単な日本語を使用しています。
+ただ、全ての日本語が「やさしい日本語」と呼ばれる
+日本語学習、初級の人のための、より親切で簡単な日本語で表示されています。
 （やさしい日本語については下記に説明）
 
 
