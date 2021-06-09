@@ -127,8 +127,7 @@ E-mail ken.tanaka0612@gmail.com
 # データベース 設計
 
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/da30c5ed9d48342f2a354fe50228a5f6.png)](https://gyazo.com/da30c5ed9d48342f2a354fe50228a5f6)
-
+[![Image from Gyazo](https://i.gyazo.com/76c3ba690b2149e477745533e3359523.png)](https://gyazo.com/76c3ba690b2149e477745533e3359523)
 ## users テーブル
 
 | Column             | Type    | Options                |
