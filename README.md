@@ -10,7 +10,7 @@
 
 ID番号: j_app
 
-暗証番号: kind_japanese>
+暗証番号: kind_japanese
 
 ・テスト用アカウント
 
